@@ -1,5 +1,7 @@
 class Product < ApplicationRecord
   include PgSearch::Model
+  has_rich_text :description
+  
   
   pg_search_scope :search_full_text,
   against: {
