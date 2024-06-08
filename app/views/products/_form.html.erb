@@ -26,9 +26,11 @@
   </div>
 
   <div>
-    <%= form.label :photo %>
-    <%= form.file_field :photo%>
+    <%= form.label :photo, "Photos" %>
+    <%= form.file_field :photos, multiple: true %>
   </div>
+
+
 
   <div>
     <%= form.submit%>

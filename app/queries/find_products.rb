@@ -15,7 +15,7 @@ class FindProducts
   private
 
   def initial_scope
-    Product.with_attached_photo
+    Product.with_attached_photos
   end
 
   def filter_by_category_id(scoped, category_id)

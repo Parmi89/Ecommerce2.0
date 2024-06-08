@@ -10,7 +10,8 @@ class Product < ApplicationRecord
     tsearch: { prefix: true }
   }
 
-  has_one_attached :photo  
+  has_many_attached :photos
   belongs_to :category
+  belongs_to :admin
  
 end
