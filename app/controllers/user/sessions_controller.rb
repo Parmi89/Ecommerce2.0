@@ -13,15 +13,9 @@ class User::SessionsController < Devise::SessionsController
   #   super
   # end
 
-  def destroy
-    respond_to do |format|
-      format.html { redirect_to products_path, notice: "User was successfully destroyed." }
-    end
-  end
+  #def destroy
+  #  super     
+  #end
 
-  private
-   def user_params
-    params.require(:user).permit(:email, :username, :password)
-  end
 
 end

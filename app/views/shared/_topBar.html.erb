@@ -10,7 +10,7 @@
 
    <%= ' Mi Cuenta |' %>
 
-Bienvenido <%= current_user&.email %>
+Bienvenido <%= current_user&.username %>
 
 
 <%= link_to t('.login'), new_user_session_path unless user_signed_in? || admin_signed_in?  %>
