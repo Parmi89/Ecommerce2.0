@@ -6,12 +6,13 @@
     <%= link_to t('.categories'), categories_path %>
 
 <%= ' Cuentas |' %> 
+<%= link_to t('.users_account'), admin_users_path %>
 
   <%= ' Mensajes |' %>
 
   <%= ' Configuracion |' %>
 
-Bienvenido <%= current_admin&.email %>
+<%= current_admin&.email %>
 
 <%= link_to t('.logout'), destroy_admin_session_path(), data: {
   turbo_method: :delete,

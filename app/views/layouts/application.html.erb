@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ecommerce20</title>
+    <title><%= t('app_name') %> | <%= t('meta_title') %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -19,5 +19,8 @@
     <% end %>
     <%= render 'shared/topBar' %>
     <%= yield %>
+    <% unless current_page?(products_path)%>
+      <%= render 'shared/footer' %>
+    <% end %>  
   </body>
 </html>
