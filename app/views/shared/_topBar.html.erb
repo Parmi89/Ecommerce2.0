@@ -8,7 +8,7 @@
 
   <%= ' Contactanos |' %> 
 
-   <%= ' Mi Cuenta |' %>
+  <%= link_to t('.mi_account'), edit_user_registration_path if user_signed_in?  %>
 
 Bienvenido <%= current_user&.username %>
 

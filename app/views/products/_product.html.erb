@@ -1,10 +1,10 @@
 <div>
   <%= link_to product_path(product), class: 'product', 'data-turbo-frame': '_top' do %>
-    <% if product.photos.attached? %>
-      <%= image_tag product.photos.first, width: 100  %>
-      <!-- Muestra la primera foto si está adjunta -->
-    <% end %>
+    <%= image_tag product.photos.attached? ? product.photos.first : 'no-photo.jpg', width: 300 %>
     <h2><%= product.name %></h2>
     <span><%= product.price %>$</span>
   <% end %>  
 </div>
+
+
+    
