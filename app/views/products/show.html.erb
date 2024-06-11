@@ -1,8 +1,5 @@
+<%= @product.photos.attached? ? @product.photos.map { |photo| image_tag photo, width: 200 }.join.html_safe : image_tag('no-photo.jpg', width: 300) %>
 
-
- <% @product.photos.each do |photo|  %>
-  <%= image_tag photo, width: 200 if @product.photos.attached? %>
-<% end %>
  <h1 class='name'><%= @product.name %></h1>
   <p class='description'><%= @product.description %></p>
 
