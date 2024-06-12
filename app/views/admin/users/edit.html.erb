@@ -1,6 +1,6 @@
-<h1>Editing users</h1>
-
+<h1><%= t('.editing_users') %></h1>
 <%= render "form", user: @user %>
-
 <br>
-
+<div>
+  <%= link_to "Back to users", admin_users_path %>
+</div>

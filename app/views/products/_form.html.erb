@@ -6,33 +6,33 @@
   <% end %>
 
   <div>
-    <%= form.label :name %>
+  <%= t('common.name') %>
     <%= form.text_field :name %>
   </div>
 
   <div>
-    <%= form.label :price %>
+  <%= t('common.price') %>
     <%= form.text_field :price %>
   </div>
 
   <div>
-    <%= form.label :description %>
+  <%= t('common.description') %>
     <%= form.rich_text_area :description %>
   </div>
 
   <div>
-    <%= form.label :category_id %>
+    <%= t('common.category_id') %>
     <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name %>
   </div>
 
   <div>
-    <%= form.label :photo, "Photos" %>
+    <%= t('common.photo') %> 
     <%= form.file_field :photos, multiple: true %>
   </div>
 
 
 
   <div>
-    <%= form.submit%>
+    <%= form.submit t('common.confirm')%>
   </div>
 <% end %>

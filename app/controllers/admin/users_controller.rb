@@ -12,7 +12,7 @@ class Admin::UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      redirect_to admin_users_path, notice: 'Usuario actualizado exitosamente.'
+      redirect_to admin_users_path, notice: t('.created')
     else
       render :edit
     end
@@ -28,7 +28,7 @@ class Admin::UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :username)
+    params.require(:user).permit(:name, :email, :username,:password)
   end
 end
   

@@ -2,8 +2,6 @@ class ProductsController < ApplicationController
   before_action :set_product, only: %i[ show edit update destroy ]
   before_action :check_admin, only: [:create,:new, :edit, :update]
   
-
-
   def index
     @categories = Category.order(name: :asc).load_async
     @pagy, @products = pagy_countless(FindProducts.new.call(product_params_index), items: 12)
@@ -12,12 +10,10 @@ class ProductsController < ApplicationController
   def show
   end
 
-
   def new
     @product = Product.new
   end
 
- 
   def edit
     unless current_admin
       redirect_to products_path, alert: "Acceso no autorizado. Debes ser administrador para acceder a esta página."
@@ -29,7 +25,7 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to product_url(@product), notice: "Product was successfully created." }
+        format.html { redirect_to product_url(@product), notice: t('.created') }
       else
         format.html { render :new, status: :unprocessable_entity }
       end
@@ -39,11 +35,9 @@ class ProductsController < ApplicationController
   def update
     respond_to do |format|
       if @product.update(product_params)
-        format.html { redirect_to product_url(@product), notice: "Product was successfully updated." }
-        format.json { render :show, status: :ok, location: @product }
+        format.html { redirect_to product_url(@product), notice: t('.updated') }
       else
         format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @product.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -52,8 +46,7 @@ class ProductsController < ApplicationController
     @product.destroy!
 
     respond_to do |format|
-      format.html { redirect_to products_url, notice: "Product was successfully destroyed." }
-      format.json { head :no_content }
+      format.html { redirect_to products_url, notice: t('.destroyed') }
     end
   end
 
@@ -63,7 +56,6 @@ class ProductsController < ApplicationController
       @product = Product.find(params[:id])
     end
 
-  
     def product_params
       params.require(:product).permit(:name, :price, :description, :photo, :category_id,:admin_id, photos: [])
     end

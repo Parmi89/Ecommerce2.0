@@ -1,22 +1,14 @@
 <div>
   <%= link_to t('.create_category'), new_category_path %>
-
   <%= link_to t('.create_product'), new_product_path %>
-
-    <%= link_to t('.categories'), categories_path %>
-
-<%= ' Cuentas |' %> 
-<%= link_to t('.users_account'), admin_users_path %>
-
+  <%= link_to t('.categories'), categories_path %>
+  <%= ' Cuentas |' %> 
+  <%= link_to t('.users_account'), admin_users_path %>
   <%= ' Mensajes |' %>
-
   <%= ' Configuracion |' %>
-
-<%= current_admin&.email %>
-
-<%= link_to t('.logout'), destroy_admin_session_path(), data: {
-  turbo_method: :delete,
-  turbo_confirm: t('common.confirm')
-}  if admin_session %>
-
+  <%= current_admin&.email %>
+  <%= link_to t('common.logout'), destroy_admin_session_path(), data: {
+    turbo_method: :delete,
+    turbo_confirm: t('common.confirm')
+  }  if admin_session %>
 </div>  

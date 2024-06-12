@@ -1,16 +1,17 @@
-<%= @product.photos.attached? ? @product.photos.map { |photo| image_tag photo, width: 200 }.join.html_safe : image_tag('no-photo.jpg', width: 300) %>
-
- <h1 class='name'><%= @product.name %></h1>
-  <p class='description'><%= @product.description %></p>
-
-  <span class='price'>$<%= @product.price %></span>
+<div>
+  <%= @product.photos.attached? ? @product.photos.map { |photo| image_tag photo, width: 200 }.join.html_safe : image_tag('no-photo.jpg', width: 300) %>
+  <h1><%= @product.name %></h1>
+  <p><%= @product.description %></p>
+  <span>$<%= @product.price %></span>
+</div
+<div>
+  <%= link_to t('common.edit'), edit_product_path(@product) if admin_session %>
+  <%= link_to t('common.delete'), product_path(@product), data: {
+  turbo_method: :delete,
+  turbo_confirm: t('common.confirm')
+} if admin_session %>
+</div>
 
   <div>
-    <%= link_to t('.edit'), edit_product_path(@product) if admin_session %> |
-    <%= link_to t('.delete'), product_path(@product), data: {
-    turbo_method: :delete,
-    turbo_confirm: t('common.confirm')
-  } if admin_session %>
-
- <%= link_to t('.back'), products_path  %>
+ <%= link_to t('common.back'), products_path  %>
 </div>
