@@ -1,12 +1,9 @@
 class FrequentquestionsController < ApplicationController
   before_action :authenticate_admin!, except: [:index]
-  before_action :set_frequentquestion, only: %i[ show edit update destroy ]
+  before_action :set_frequentquestion, only: %i[edit update destroy ]
   
   def index
     @frequentquestions = Frequentquestion.all
-  end
-
-  def show
   end
 
   def new
@@ -21,7 +18,7 @@ class FrequentquestionsController < ApplicationController
 
     respond_to do |format|
       if @frequentquestion.save
-        format.html { redirect_to frequentquestion_url(@frequentquestion), notice: "Frequentquestion was successfully created." }
+        format.html { redirect_to frequentquestions_url, notice: "Frequentquestion was successfully created." }
       else
         format.html { render :new, status: :unprocessable_entity }
       end

@@ -19,7 +19,7 @@ module Ecommerce20
     # Configuration for the application, engines, and railties goes here.
     #
     # lenguage by default
-    #config.i18n.default_locale = :es
+    config.i18n.default_locale = :en
 
     # Allow multiquery
     config.active_record.async_query_executor = :global_thread_pool
