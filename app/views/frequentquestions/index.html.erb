@@ -1,0 +1,14 @@
+<h1><%= t('Frequentquestions') %></h1>
+
+<%= link_to "New frequentquestion", new_frequentquestion_path if admin_signed_in?  %>
+
+<div >
+    <% @frequentquestions.each do |frequentquestion| %>
+      <%= render frequentquestion %>
+    <%= link_to t('common.edit'), edit_frequentquestion_path(frequentquestion) if admin_session %>
+    <%= link_to t('common.delete'), frequentquestion, data: {
+    turbo_method: :delete,
+    turbo_confirm: t('common.confirm')
+  } if admin_session %>
+  <% end %>
+</div>

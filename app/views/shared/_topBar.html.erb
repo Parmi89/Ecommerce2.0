@@ -1,7 +1,7 @@
 <div>
   <%= link_to t('.all_product'), products_path %>
   <%= ' Quienes somos |' %>  
-  <%= ' Preguntas frecuentes |' %>    
+  <%= link_to t('.frecuent_question'), frequentquestions_path %>    
   <%= ' Contactanos ' %> 
   <%= link_to t('.my_account'), edit_user_registration_path if user_signed_in?  %>
   <%= t('.welcome')%><%= current_user&.username %>

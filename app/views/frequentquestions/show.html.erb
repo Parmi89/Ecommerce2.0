@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @frequentquestion %>
+
+<div>
+  <%= link_to "Edit this frequentquestion", edit_frequentquestion_path(@frequentquestion) %> |
+  <%= link_to "Back to frequentquestions", frequentquestions_path %>
+
+  <%= button_to "Destroy this frequentquestion", @frequentquestion, method: :delete %>
+</div>
