@@ -12,16 +12,16 @@
   <% end %>
 
   <div>
-    <%= form.label :question, style: "display: block" %>
+    <%= t('common.question')%>
     <%= form.text_field :question %>
   </div>
 
   <div>
-    <%= form.label :answer, style: "display: block" %>
+    <%= t('common.answer') %>
     <%= form.text_area :answer %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit t('common.accept') %>
   </div>
 <% end %>

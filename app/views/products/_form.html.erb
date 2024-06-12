@@ -5,34 +5,33 @@
     </div>
   <% end %>
 
+  <%= form.hidden_field :admin_id, value: current_admin.id %>
   <div>
-  <%= t('common.name') %>
+    <%= t('.name') %>
     <%= form.text_field :name %>
   </div>
 
   <div>
-  <%= t('common.price') %>
+    <%= t('.price') %>
     <%= form.text_field :price %>
   </div>
 
   <div>
-  <%= t('common.description') %>
+    <%= t('.description') %>
     <%= form.rich_text_area :description %>
   </div>
 
   <div>
-    <%= t('common.category_id') %>
+    <%= t('.category') %>
     <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name %>
   </div>
 
   <div>
-    <%= t('common.photo') %> 
+    <%= t('.photo') %> 
     <%= form.file_field :photos, multiple: true %>
   </div>
 
-
-
   <div>
-    <%= form.submit t('common.confirm')%>
+    <%= form.submit t('common.accept')%>
   </div>
 <% end %>

@@ -1,6 +1,6 @@
 <h1><%= t('.frequentquestions') %></h1>
 
-<%= link_to "New frequentquestion", new_frequentquestion_path if admin_signed_in?  %>
+<%= link_to t('.new_frequentquestion'), new_frequentquestion_path if admin_signed_in?  %>
 
 <div >
     <% @frequentquestions.each do |frequentquestion| %>

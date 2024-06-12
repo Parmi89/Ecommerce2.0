@@ -18,7 +18,7 @@ class FrequentquestionsController < ApplicationController
 
     respond_to do |format|
       if @frequentquestion.save
-        format.html { redirect_to frequentquestions_url, notice: "Frequentquestion was successfully created." }
+        format.html { redirect_to frequentquestions_url, notice:  t('.created') } 
       else
         format.html { render :new, status: :unprocessable_entity }
       end
@@ -28,7 +28,7 @@ class FrequentquestionsController < ApplicationController
   def update
     respond_to do |format|
       if @frequentquestion.update(frequentquestion_params)
-        format.html { redirect_to frequentquestions_url, notice: "Frequentquestion was successfully updated." }
+        format.html { redirect_to frequentquestions_url, notice: t('.updated') }
       else
         format.html { render :edit, status: :unprocessable_entity }
       end
@@ -39,7 +39,7 @@ class FrequentquestionsController < ApplicationController
     @frequentquestion.destroy!
 
     respond_to do |format|
-      format.html { redirect_to frequentquestions_url, notice: "Frequentquestion was successfully destroyed." }
+      format.html { redirect_to frequentquestions_url, notice:  t('.destroyed') }
     end
   end
 

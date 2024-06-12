@@ -1,0 +1,71 @@
+es:
+  app_name: 'SUBLIMATE'
+  meta_title: 'Compra todo lo que buscas aqui!'
+  create_account: 'Crear cuenta nueva'
+  email: 'Usuario/Correo electronico'
+  username: 'Usuario'
+  password: 'Contraseña'
+  password_confirm: 'Confirmar contraseña'
+  common:
+    log_in: 'Ingresar'
+    accept: 'Aceptar'
+    logout: 'Salir'
+    back: 'Volver'
+    edit: 'Editar'
+    delete: 'Eliminar'
+    confirm: '¿Estás seguro?'  
+    name: 'Nombre'
+    email: 'Correo electronico'
+    username: 'Usuario'
+    password: 'Contraseña'
+    question: 'Pregunta'  
+    answer: 'Respuesta'
+    not_admin: 'Acceso no autorizado. Debes ser administrador para acceder a esta página.'
+  shared:
+    topBar:
+      all_product: 'Todos los productos'
+      frecuent_question: 'Preguntas frecuentes'
+      my_account: 'Mi cuenta'
+      welcome: 'Bienvenido '
+      register: 'Registrarse'
+    topBarAdmin:
+      create_category: 'Crear categoria'
+      create_product: 'Crear Producto'
+      categories: 'Categorias'
+      users_account: 'Cuenta de usuarios'   
+  categories:
+    edit:
+      editingCategory: 'Editar categoria'
+    create:
+      created: 'La categoria se creo correctamente!!!'
+    update:
+      updated: 'La categoria se actualizo correctamente!!!'
+    destroy:
+      destroyed: 'La categoria se elimino correctamente!!!'         
+  products:
+        searchBox:
+          query_text: '¿Que estas buscando?'
+        edit:
+          editing_product: 'Editar producto'  
+        form:    
+          name: 'Nombre del producto'
+          price: 'Precio'
+          description: 'Descripcion:'
+          category: 'Categoria'
+          photo: 'Foto'
+        create:
+          created: 'El producto se creo correctamente!!!'
+        update:
+          updated: 'Producto se actualizo correctamente!!!'
+        destroy:
+          destroyed: 'El producto se elimino correctamente!!!'   
+  frequentquestions:
+    index:
+      frequentquestions: 'Preguntas frecuentes'
+      new_frequentquestion: 'Nueva pregunta frecuente'   
+    create:
+      created: 'La pregunta frecuente se creo correctamente!!!'
+    update:
+      updated: 'La pregunta frecuente se actualizó correctamente!!!'  
+    destroy:
+      destroyed: La pregunta frecuente se elimino correctamente!!! 

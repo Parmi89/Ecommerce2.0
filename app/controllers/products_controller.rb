@@ -16,7 +16,7 @@ class ProductsController < ApplicationController
 
   def edit
     unless current_admin
-      redirect_to products_path, alert: "Acceso no autorizado. Debes ser administrador para acceder a esta página."
+      redirect_to products_path, alert: t('common.not_admin')
     end
   end
 
@@ -66,7 +66,7 @@ class ProductsController < ApplicationController
 
   def check_admin
     unless current_admin 
-      redirect_to products_path, alert: "Acceso no autorizado. Debes ser administrador para acceder a esta página."
+      redirect_to products_path, alert: t('common.not_admin')
     end
   end
 end

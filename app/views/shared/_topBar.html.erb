@@ -4,11 +4,11 @@
   <%= link_to t('.frecuent_question'), frequentquestions_path %>    
   <%= ' Contactanos ' %> 
   <%= link_to t('.my_account'), edit_user_registration_path if user_signed_in?  %>
-  <%= t('.welcome')%><%= current_user&.username %>
-  <%= link_to t('common.login'), new_user_session_path unless user_signed_in? || admin_signed_in?  %>
-  <%= link_to t('common.register'), new_user_registration_path unless user_signed_in? || admin_signed_in? %>
+  
+  <%= link_to t('common.log_in'), new_user_session_path unless user_signed_in? || admin_signed_in?  %>
+  <%= link_to t('.register'), new_user_registration_path unless user_signed_in? || admin_signed_in? %>
   <%= link_to t('common.logout'), destroy_user_session_path(), data: {
     turbo_method: :delete,
     turbo_confirm: t('common.confirm')
-  }  if user_session %>
+  }  if user_session %> <%= current_user&.username %>
 </div>

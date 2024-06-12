@@ -5,9 +5,9 @@
 	<%= user.username %>
 	<%= user.password %>
  
-  <%= link_to t('.edit'), edit_admin_user_path(user) %>
+  <%= link_to t('common.edit'), edit_admin_user_path(user) %>
     
-  <%= link_to t('.delete'), admin_user_path(user), data: {
+  <%= link_to t('common.delete'), admin_user_path(user), data: {
   turbo_method: :delete,
   turbo_confirm: t('common.confirm')
 } %>
