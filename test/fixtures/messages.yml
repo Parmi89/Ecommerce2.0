@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sender: MyString
+  title: MyString
+  body: MyString
+  response_type: MyString
+  state: MyString
+
+two:
+  sender: MyString
+  title: MyString
+  body: MyString
+  response_type: MyString
+  state: MyString

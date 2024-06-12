@@ -1,5 +1,8 @@
 es:
   devise:
+    registrations:
+      edit:
+        edit: 'HOOOOLAAAAA'
     confirmations:
       confirmed: "Tu cuenta ya ha sido confirmada."
       confirmed_and_signed_in: "Tu cuenta ya ha sido confirmada. Has sido identificado."
@@ -16,22 +19,6 @@ es:
       unauthenticated: "Necesitas iniciar sesión o registrarte para continuar."
       unconfirmed: "Debes confirmar tu cuenta para continuar."
       last_attempt: "Tienes un intento más antes que tu cuenta quede bloqueada."
-    mailer:
-      confirmation_instructions:
-        subject: "Instrucciones de confirmación"
-      reset_password_instructions:
-        subject: "Instrucciones para restablecer tu contraseña"
-      unlock_instructions:
-        subject: "Instrucciones de desbloqueo"
-    omniauth_callbacks:
-      failure: "No se te pudo autorizar de %{kind} debido a \"%{reason}\"."
-      success: "Identificado correctamente de %{kind}."
-    passwords:
-      no_token: "No puedes acceder a esta página sino es por medio de un enlace para restablecer contraseña. Si accediste desde el enlace para restablecer la contraseña, asegúrate de que la URL esté completa."
-      send_instructions: "Recibirás un correo electrónico con instrucciones sobre cómo restablecer tu contraseña en unos minutos."
-      send_paranoid_instructions: "Si tu correo electrónico existe en nuestra base de datos, recibirás un enlace para restablecer la contraseña en unos minutos."
-      updated: "Tu contraseña se cambió correctamente. Has sido identificado."
-      updated_not_active: "Tu contraseña se cambió correctamente."
     registrations:
       destroyed: "¡Adiós! Tu cuenta ha sido cancelada. Esperamos volver a verte pronto."
       signed_up: "¡Bienvenido! Tu cuenta se ha creado!!!."

@@ -12,7 +12,7 @@ class Admin::UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      redirect_to admin_users_path, notice: t('.created')
+      redirect_to admin_users_path, notice: t('.updated')
     else
       render :edit
     end

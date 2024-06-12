@@ -1,0 +1,44 @@
+<%= form_with(model: message) do |form| %>
+  <% if message.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(message.errors.count, "error") %> prohibited this message from being saved:</h2>
+
+      <ul>
+        <% message.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <% if current_admin %>
+      <%= t('.change_status')%>
+      <%= form.select :state, options_for_select([ t('.pending'), t('.send'), t('.answered')]) %>
+    <% end %>
+  </div>  
+
+  <div>
+    <%= t('.sender') %>
+    <%= form.text_field :sender, placeholder: t('common.name'), required: true %>
+  </div>
+
+  <div>
+    <%= t('.title') %>
+    <%= form.text_field :title, required: true %>
+  </div>
+
+  <div>
+    <%= t('.type_response') %>
+    <%= form.select :response_type, ['Whatsapp','Email', 'Other'] %>
+  </div>
+
+  <div>
+   <%= t('.body') %>
+   <%= form.rich_text_area :body, placeholder: t('.full_mesagge') %>
+  </div>
+
+  <div>
+    <%= form.submit t('.send') %>
+  </div>
+<% end %>

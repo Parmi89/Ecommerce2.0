@@ -28,6 +28,7 @@ es:
       my_account: 'Mi cuenta'
       welcome: 'Bienvenido '
       register: 'Registrarse'
+      contact_us: 'Contactanos'
     topBarAdmin:
       create_category: 'Crear categoria'
       create_product: 'Crear Producto'
@@ -69,3 +70,37 @@ es:
       updated: 'La pregunta frecuente se actualizó correctamente!!!'  
     destroy:
       destroyed: La pregunta frecuente se elimino correctamente!!! 
+  messages:
+    create:
+      created: 'Su mensaje se envio correctamente!!!'
+    update:
+      updated: 'Mensaje actualizado!!!'  
+    destroy:
+      destroyed: 'Mensaje eliminado!!!'
+    new:  
+      messenger_service: 'Mensajeria'  
+    message:
+      sender: 'Remitente'
+      title: 'Titulo del mensaje'
+      body: 'Cuerpo del mensaje'    
+      state: 'Estado'
+    form:  
+      sender: 'Remitente'
+      title: 'Titulo del mensaje'
+      body: 'Cuerpo del mensaje'
+      type_response: 'Tipo de respuesta'
+      full_mesagge: 'Escribe aqui tus consultas y los datos necesarios para contactarnos'
+      send: 'Enviar'
+      change_status: 'Cambiar estado'
+      pending: 'Pendiente'
+      send: 'Visto'
+      answered: 'Respondido'
+  admin:
+    users:
+      update:
+        updated: 'Usuario modificado correctamente!!!'
+      destroy:
+        destroyed: 'Usuario eliminado correctamente!!!' 
+
+
+

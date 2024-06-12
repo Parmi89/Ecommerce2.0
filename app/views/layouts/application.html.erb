@@ -19,8 +19,6 @@
     <% end %>
     <%= render 'shared/topBar' %>
     <%= yield %>
-    <% unless current_page?(products_path)%>
       <%= render 'shared/footer' %>
-    <% end %>  
   </body>
 </html>

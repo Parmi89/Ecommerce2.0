@@ -4,7 +4,7 @@
   <%= link_to t('.categories'), categories_path %>
   
   <%= link_to t('.users_account'), admin_users_path %>
-  <%= ' Mensajes |' %>
+  <%= link_to t('.messages'), messages_path %>
   <%= ' Configuracion |' %>
   <%= current_admin&.email %>
   <%= link_to t('common.logout'), destroy_admin_session_path(), data: {
