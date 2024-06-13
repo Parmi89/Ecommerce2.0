@@ -1,0 +1,10 @@
+<div>
+  <%= link_to t('.new_aboutus'), new_about_u_path if current_admin %>
+</div>
+<div >
+  <% @about_us.each do |about_u| %>
+    <%= render about_u %>
+    <%= link_to t('common.edit'), edit_about_u_path(about_u) if current_admin %>
+  <% end %>
+</div>
+

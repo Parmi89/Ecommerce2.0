@@ -23,9 +23,11 @@ es:
     question: 'Pregunta'  
     answer: 'Respuesta'
     not_admin: 'Acceso no autorizado. Debes ser administrador para acceder a esta página.'
+    show: 'Ver'
   shared:
     topBar:
       all_product: 'Todos los productos'
+      about_us: 'Quienes somos'
       frecuent_question: 'Preguntas frecuentes'
       my_account: 'Mi cuenta'
       welcome: 'Bienvenido '
@@ -120,6 +122,21 @@ es:
         close_my_account: 'Cerrar mi cuenta'
         cancel_my_account: 'Cancelar mi cuenta'
         current password: 'Contraseña actual'
+  about_us:
+    create:
+      created: 'Quienes somos se cargo correctamente!!!'
+    update:
+      updated: 'Quienes somos se modifico correctamente!!!'
+    destroy:
+      destroyed: 'Quienes somos se ha eliminado correctamente!!!'
+    form:
+      title: 'Titulo'
+    edit:
+      editing_about: 'Editar Quienes somos'         
+    index:
+      new_aboutus: 'Nuevo Quienes somos'
+    new:
+      new_about_u: 'Nuevo Quienes somos'  
 
 
 
