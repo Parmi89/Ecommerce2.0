@@ -18,6 +18,8 @@ es:
     email: 'Correo electronico'
     username: 'Usuario'
     password: 'Contraseña'
+    repeat_password: 'Contraseña nueva'
+    close_acount: 'Cerrar cuenta'
     question: 'Pregunta'  
     answer: 'Respuesta'
     not_admin: 'Acceso no autorizado. Debes ser administrador para acceder a esta página.'
@@ -101,6 +103,15 @@ es:
         updated: 'Usuario modificado correctamente!!!'
       destroy:
         destroyed: 'Usuario eliminado correctamente!!!' 
+  devise:
+    registrations:
+      edit:
+        change_password: 'Cambiar contraseña'
+        confirm_new_password: 'Confirmar nueva contraseña'
+        current-password: 'Contraseña actual'
+        close_my_account: 'Cerrar mi cuenta'
+        cancel_my_account: 'Cancelar mi cuenta'
+        current password: 'Contraseña actual'
 
 
 

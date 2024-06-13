@@ -3,9 +3,7 @@
   <%= ' Quienes somos |' %>  
   <%= link_to t('.frecuent_question'), frequentquestions_path %>    
   <%= link_to t('.contact_us'), new_message_path unless admin_signed_in? %>  
-  <!-- <%= link_to t('.my_account'), edit_user_registration_path if user_signed_in?  %> -->
-  <%='Mi cuenta' %>
-  
+  <%= link_to t('.my_account'), edit_user_registration_path if user_signed_in?  %>   
 
   <%= link_to t('common.log_in'), new_user_session_path unless user_signed_in? || admin_signed_in?  %>
   <%= link_to t('.register'), new_user_registration_path unless user_signed_in? || admin_signed_in? %>
