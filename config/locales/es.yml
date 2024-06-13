@@ -36,6 +36,7 @@ es:
       create_product: 'Crear Producto'
       categories: 'Categorias'
       users_account: 'Cuenta de usuarios'   
+      messages: 'Mensajes'
   categories:
     edit:
       editingCategory: 'Editar categoria'
@@ -95,14 +96,20 @@ es:
       send: 'Enviar'
       change_status: 'Cambiar estado'
       pending: 'Pendiente'
-      send: 'Visto'
+      send: 'Enviar'
       answered: 'Respondido'
+      seen: 'Visto'
   admin:
     users:
       update:
         updated: 'Usuario modificado correctamente!!!'
       destroy:
-        destroyed: 'Usuario eliminado correctamente!!!' 
+        destroyed: 'Usuario eliminado correctamente!!!'
+      index:
+        users_list: 'Lista de usuarios'  
+      form:
+        change_password: 'Contraseña nueva' 
+        confirm_new_password: 'Confirmar contraseña nueva'  
   devise:
     registrations:
       edit:

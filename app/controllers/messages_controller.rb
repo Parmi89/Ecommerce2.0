@@ -2,38 +2,32 @@ class MessagesController < ApplicationController
   before_action :set_message, only: %i[ show edit update destroy ]
   before_action :check_admin, only: [:index,:edit, :update, :destroy]
 
-  # GET /messages or /messages.json
   def index
     @messages = Message.order(state: :desc, created_at: :desc)
   end  
 
-  # GET /messages/1 or /messages/1.json
   def show
   end
 
-  # GET /messages/new
   def new
     @message = Message.new
   end
 
-  # GET /messages/1/edit
   def edit
   end
 
-  # POST /messages or /messages.json
   def create
     @message = Message.new(message_params)
 
     respond_to do |format|
       if @message.save
-        format.html { redirect_to messages_path, notice: t('.created') }
+        format.html { redirect_to new_message_path, notice: t('.created') }
       else
         format.html { render :new, status: :unprocessable_entity }
       end
     end
   end
 
-  # PATCH/PUT /messages/1 or /messages/1.json
   def update
     respond_to do |format|
       if @message.update(message_params)

@@ -27,11 +27,14 @@
   </div>
 
   <div>
-    <%= t('common.password') %>
-    <%= form.text_field :encrypted_password %>
-  </div>
+  <%= form.password_field :password, placeholder: t('.change_password') %>
+</div>
 
-  <div>
-    <%= form.submit t('common.accept') %>
-  </div>
+<div>
+  <%= form.password_field :password_confirmation, placeholder: t('.confirm_new_password') %>
+</div>
+
+<div class="actions">
+  <%= form.submit t('common.accept') %>
+</div>
 <% end %>

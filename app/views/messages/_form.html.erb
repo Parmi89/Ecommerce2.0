@@ -14,7 +14,7 @@
   <div>
     <% if current_admin %>
       <%= t('.change_status')%>
-      <%= form.select :state, options_for_select([ t('.pending'), t('.send'), t('.answered')]) %>
+      <%= form.select :state, options_for_select([ t('.pending'), t('.seen'), t('.answered')]) %>
     <% end %>
   </div>  
 
