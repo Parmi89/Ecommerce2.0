@@ -81,13 +81,14 @@ es:
     destroy:
       destroyed: 'Mensaje eliminado!!!'
     new:  
-      messenger_service: 'Mensajeria'  
+      messenger_service: 'Mensajeria'
     message:
       sender: 'Remitente'
       title: 'Titulo del mensaje'
       body: 'Cuerpo del mensaje'    
       state: 'Estado'
     form:  
+      other: 'Otro'  
       sender: 'Remitente'
       title: 'Titulo del mensaje'
       body: 'Cuerpo del mensaje'
