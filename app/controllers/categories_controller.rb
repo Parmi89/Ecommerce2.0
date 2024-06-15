@@ -5,7 +5,7 @@ class CategoriesController < ApplicationController
   def index
     @categories = Category.order(name: :asc)
   end
-
+  
   def new
     @category = Category.new
   end

@@ -1,13 +1,29 @@
-<div>
-  <%= link_to t('.all_product'), products_path %>
-  <%= link_to t('.about_us'), about_us_path %> 
-  <%= link_to t('.frecuent_question'), frequentquestions_path %>    
-  <%= link_to t('.contact_us'), new_message_path unless admin_signed_in? %>  
-  <%= link_to t('.my_account'), edit_user_registration_path if user_signed_in?  %>   
-  <%= link_to t('common.log_in'), new_user_session_path unless user_signed_in? || admin_signed_in?  %>
-  <%= link_to t('.register'), new_user_registration_path unless user_signed_in? || admin_signed_in? %>
-  <%= link_to t('common.logout'), destroy_user_session_path(), data: {
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+      <%= link_to t('.all_product'), products_path,class:"nav-link active" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to t('.about_us'), about_us_path,class:"nav-link active" %> 
+  </li>
+  <li class="nav-item">
+     <%= link_to t('.frecuent_question'), frequentquestions_path,class:"nav-link active" %>   
+  </li>
+  <li class="nav-item">
+      <%= link_to t('.contact_us'), new_message_path, class:"nav-link active" unless admin_signed_in? %>  
+  </li>
+  <li class="nav-item">
+     <%= link_to t('.my_account'), edit_user_registration_path, class:"nav-link active" if user_signed_in?  %>  
+  </li>
+  <li class="nav-item">
+      <%= link_to t('common.log_in'), new_user_session_path,class:"nav-link active" unless user_signed_in? || admin_signed_in?  %>
+  </li>
+  <li class="nav-item">
+       <%= link_to t('.register'), new_user_registration_path, class:"nav-link active" unless user_signed_in? || admin_signed_in?  %>
+  </li>
+  <li class="nav-item">
+       <%= link_to t('common.logout'), destroy_user_session_path(),class:"nav-link active", data: {
     turbo_method: :delete,
     turbo_confirm: t('common.confirm')
-  }  if user_session %> <%= current_user&.username %>
-</div>
+  }  if user_session %>
+  </li>
+</ul>

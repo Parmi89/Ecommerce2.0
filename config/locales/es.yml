@@ -2,7 +2,7 @@ es:
   app_name: 'SUBLIMATE'
   meta_title: 'Compra todo lo que buscas aqui!'
   create_account: 'Crear cuenta nueva'
-  email: 'Usuario/Correo electronico'
+  email: 'Correo electronico'
   username: 'Usuario'
   password: 'Contraseña'
   password_confirm: 'Confirmar contraseña'
@@ -39,6 +39,8 @@ es:
       categories: 'Categorias'
       users_account: 'Cuenta de usuarios'   
       messages: 'Mensajes'
+    header:
+       welcome: "¡Bienvenido/a %{email}!"  
   categories:
     edit:
       editingCategory: 'Editar categoria'
@@ -49,6 +51,8 @@ es:
     destroy:
       destroyed: 'La categoria se elimino correctamente!!!'         
   products:
+        index:
+          all_categories: "Todas las categorias:"
         searchBox:
           query_text: '¿Que estas buscando?'
         edit:
