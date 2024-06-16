@@ -42,6 +42,8 @@ es:
     header:
        welcome: "¡Bienvenido/a %{email}!"  
   categories:
+    index:
+      available_categories: 'Categorias dispobibles'
     edit:
       editingCategory: 'Editar categoria'
     create:
@@ -49,7 +51,9 @@ es:
     update:
       updated: 'La categoria se actualizo correctamente!!!'
     destroy:
-      destroyed: 'La categoria se elimino correctamente!!!'         
+      destroyed: 'La categoria se elimino correctamente!!!'   
+    new:
+      new_category: 'Categoria nueva'        
   products:
         index:
           all_categories: "Todas las categorias:"
@@ -61,8 +65,10 @@ es:
           name: 'Nombre del producto'
           price: 'Precio'
           description: 'Descripcion:'
-          category: 'Categoria'
+          select_category: 'Selecciona su categoria'
           photo: 'Foto'
+        new:
+          new_product: 'Nuevo producto'  
         create:
           created: 'El producto se creo correctamente!!!'
         update:
@@ -114,9 +120,13 @@ es:
         destroyed: 'Usuario eliminado correctamente!!!'
       index:
         users_list: 'Lista de usuarios'  
+      user:
+        see_data: 'Ver informacion'
       form:
         change_password: 'Contraseña nueva' 
-        confirm_new_password: 'Confirmar contraseña nueva'  
+        confirm_new_password: 'Confirmar contraseña nueva' 
+      edit:
+        editing_users: 'Modificar usuario'          
   devise:
     registrations:
       edit:

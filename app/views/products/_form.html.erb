@@ -1,37 +1,41 @@
-<%= form_with(model: product) do |form| %>
-  <% @product.errors.full_messages.each do |error| %>
-    <div>
-      <%= error %>
+<%= form_with(model: product, class: "my-4") do |form| %>
+  <% if @product.errors.any? %>
+    <div class="alert alert-danger">
+      <ul>
+        <% @product.errors.full_messages.each do |error| %>
+          <li><%= error %></li>
+        <% end %>
+      </ul>
     </div>
   <% end %>
 
   <%= form.hidden_field :admin_id, value: current_admin.id %>
-  <div>
-    <%= t('.name') %>
-    <%= form.text_field :name %>
+
+  <div class="form-group">
+    <%= form.label :name, t('.name') %>
+    <%= form.text_field :name, class: 'form-control' %>
   </div>
 
-  <div>
-    <%= t('.price') %>
-    <%= form.text_field :price %>
+  <div class="form-group">
+    <%= form.label :price, t('.price') %>
+    <%= form.text_field :price, class: 'form-control' %>
   </div>
 
-  <div>
-    <%= t('.description') %>
-    <%= form.rich_text_area :description %>
+  <div class="form-group">
+    <%= form.label :description, t('.description') %>
+    <%= form.rich_text_area :description, class: 'form-control' %>
   </div>
 
-  <div>
-    <%= t('.category') %>
-    <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name %>
-  </div>
+  <div class="form-group">
+    <%= form.label :category_id, t('.select_category') %>
+    <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name, { include_blank: true }, { class: 'form-control' } %>
+  </div><br>
 
+  <div class="form-group">
+    <%= form.label :photos, t('.photo') %>
+    <%= form.file_field :photos, multiple: true, class: 'form-control-file' %>
+  </div><br>
   <div>
-    <%= t('.photo') %> 
-    <%= form.file_field :photos, multiple: true %>
-  </div>
-
-  <div>
-    <%= form.submit t('common.accept')%>
+    <%= form.submit t('common.accept'), class: 'btn btn-primary' %>
   </div>
 <% end %>

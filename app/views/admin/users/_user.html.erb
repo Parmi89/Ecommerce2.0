@@ -1,15 +1,28 @@
+<div class="container">
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th class="text-center" style="width: 10%;"><%= t('common.id')%></th>
+          <th class="text-center" style="width: 20%;"><%= t('common.email')%></th>
+          <th class="text-center" style="width: 20%;"><%= t('common.username')%></th>
+          <th class="text-center" style="width: 25%;"><%= t('common.accion')%></th>
+          <th class="text-center" style="width: 25%;"><%= t('.see_data')%></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="text-center"><%= user.id %></td>
+          <td class="text-center"><%= user.email %></td>
+          <td class="text-center"><%= user.username %></td>
+          <td class="text-center">
+            <%= link_to t('common.edit'), edit_admin_user_path(user), class: "btn btn-primary btn-sm mr-2" %>
+            <%= link_to t('common.delete'), admin_user_path(user), class: "btn btn-danger btn-sm", data: { turbo_method: :delete, turbo_confirm: t('common.confirm')} %>
 
-<div>
-	<%= user.id %>
-	<%= user.email %>
-	<%= user.username %>
-  
-  <%= link_to t('common.edit'), edit_admin_user_path(user) %>
-    
-  <%= link_to t('common.delete'), admin_user_path(user), data: {
-  turbo_method: :delete,
-  turbo_confirm: t('common.confirm')
-} %>
-
-Ver datos de este usuario
+          </td>
+          <td class="text-center"><%= link_to 'Ver datos de este usuario', admin_user_path(user), class: "btn btn-info btn-sm" %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

@@ -1,44 +1,47 @@
-<%= form_with(model: message) do |form| %>
-  <% if message.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(message.errors.count, "error") %> prohibited this message from being saved:</h2>
-
-      <ul>
-        <% message.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div>
-    <% if current_admin %>
-      <%= t('.change_status')%>
-      <%= form.select :state, options_for_select([ t('.pending'), t('.seen'), t('.answered')]) %>
+<div class="container mt-4">
+  <%= form_with(model: message) do |form| %>
+    <% if message.errors.any? %>
+      <div class="alert alert-danger">
+        <h2><%= pluralize(message.errors.count, "error") %> prohibited this message from being saved:</h2>
+        <ul>
+          <% message.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
     <% end %>
-  </div>  
 
-  <div>
-    <%= t('.sender') %>
-    <%= form.text_field :sender, placeholder: t('common.name'), required: true %>
-  </div>
+    <% if current_admin %>
+      <div class="form-group">
+        <%= form.label :state, t('.change_status') %>
+        <%= form.select :state, options_for_select([ t('.pending'), t('.seen'), t('.answered')]), {}, class: 'form-control' %>
+      </div>
+    <% end %>
 
-  <div>
-    <%= t('.title') %>
-    <%= form.text_field :title, required: true %>
-  </div>
+    <div class="form-group">
+      <%= form.label :sender, t('.sender') %>
+      <%= form.text_field :sender, class: 'form-control', placeholder: t('common.name'), required: true %>
+    </div>
 
-  <div>
-    <%= t('.type_response') %>
-    <%= form.select :response_type, [t('.whatsapp'), t('common.email'), t('.other')] %>
-  </div>
+    <div class="form-group">
+      <%= form.label :title, t('.title') %>
+      <%= form.text_field :title, class: 'form-control', required: true %>
+    </div>
 
-  <div>
-   <%= t('.body') %>
-   <%= form.rich_text_area :body, placeholder: t('.full_mesagge') %>
-  </div>
+    <div class="form-group">
+      <%= form.label :response_type, t('.type_response') %>
+      <%= form.select :response_type, [t('.whatsapp'), t('common.email'), t('.other')], {}, class: 'form-control' %>
+    </div>
 
-  <div>
-    <%= form.submit t('.send') %>
-  </div>
-<% end %>
+    <div class="form-group">
+      <%= form.label :body, t('.body') %>
+      <%= form.rich_text_area :body, class: 'form-control', placeholder: t('.full_message') %>
+    </div>
+
+    <div class="form-group mt-4">
+      <%= form.submit t('.send'), class: 'btn btn-primary' %>
+    </div>
+
+
+  <% end %>
+</div>

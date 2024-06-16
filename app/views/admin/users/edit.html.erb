@@ -1,6 +1,5 @@
-<h1><%= t('.editing_users') %></h1>
+<div class="container text-center mt-4">
+  <h1><%= t('.editing_users') %></h1>
+</div>  
 <%= render "form", user: @user %>
-<br>
-<div>
-  <%= link_to t('common.back'), admin_users_path %>
-</div>
+
