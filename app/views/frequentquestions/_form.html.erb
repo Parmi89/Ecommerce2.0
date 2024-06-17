@@ -1,27 +1,33 @@
 <%= form_with(model: frequentquestion) do |form| %>
-  <% if frequentquestion.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(frequentquestion.errors.count, "error") %> prohibited this frequentquestion from being saved:</h2>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <% if frequentquestion.errors.any? %>
+          <div class="alert alert-danger">
+            <h2><%= pluralize(frequentquestion.errors.count, "error") %> prohibited this frequentquestion from being saved:</h2>
 
-      <ul>
-        <% frequentquestion.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+            <ul>
+              <% frequentquestion.errors.each do |error| %>
+                <li><%= error.full_message %></li>
+              <% end %>
+            </ul>
+          </div>
         <% end %>
-      </ul>
+
+        <div class="mb-3">
+          <%= form.text_field :question, class: "form-control", placeholder: t('common.question') %>
+        </div>
+
+        <div class="mb-3">
+          <%= form.text_area :answer, class: "form-control", placeholder: t('common.answer') %>
+        </div>
+
+        <div class="mb-3">
+         <%= form.submit t('common.accept'), class: "btn btn btn-primary mb-3" %>
+         
+        </div>
+      </div>
     </div>
-  <% end %>
-
-  <div>
-    <%= t('common.question')%>
-    <%= form.text_field :question %>
-  </div>
-
-  <div>
-    <%= t('common.answer') %>
-    <%= form.text_area :answer %>
-  </div>
-
-  <div>
-    <%= form.submit t('common.accept') %>
   </div>
 <% end %>
+

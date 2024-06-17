@@ -85,6 +85,8 @@ es:
       updated: 'La pregunta frecuente se actualizó correctamente!!!'  
     destroy:
       destroyed: La pregunta frecuente se elimino correctamente!!! 
+    new:
+      new_frequentquestion: 'Agregar nueva pregunta frecuente'  
   messages:
     create:
       created: 'Su mensaje se envio correctamente!!!'
@@ -105,7 +107,7 @@ es:
       title: 'Titulo del mensaje'
       body: 'Cuerpo del mensaje'
       type_response: 'Tipo de respuesta'
-      full_mesagge: 'Escribe aqui tus consultas y los datos necesarios para contactarnos'
+      full_message: 'Escribe aqui tus consultas y los datos necesarios para contactarnos'
       send: 'Enviar'
       change_status: 'Cambiar estado'
       pending: 'Pendiente'
@@ -145,6 +147,7 @@ es:
       destroyed: 'Quienes somos se ha eliminado correctamente!!!'
     form:
       title: 'Titulo'
+      body: 'Cuerpo de presentacion'
     edit:
       editing_about: 'Editar Quienes somos'         
     index:

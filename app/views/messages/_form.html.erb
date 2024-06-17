@@ -33,10 +33,11 @@
       <%= form.select :response_type, [t('.whatsapp'), t('common.email'), t('.other')], {}, class: 'form-control' %>
     </div>
 
-    <div class="form-group">
-      <%= form.label :body, t('.body') %>
-      <%= form.rich_text_area :body, class: 'form-control', placeholder: t('.full_message') %>
-    </div>
+ <div class="form-group">
+  <%= form.label :body, t('.body') %>
+  <%= form.rich_text_area :body, class: 'form-control', placeholder: t('.full_message'), required: true %>
+</div>
+
 
     <div class="form-group mt-4">
       <%= form.submit t('.send'), class: 'btn btn-primary' %>

@@ -1,14 +1,13 @@
-<h1><%= t('.frequentquestions') %></h1>
+<div class="container text-center mt-4">
+<div class="container text-center mt-4">
+  <h1><%= t('.frequentquestions') %></h1>
+  <%= link_to t('.new_frequentquestion'), new_frequentquestion_path, class: "btn btn-sm btn-outline-secondary mb-3 mt-4" if admin_signed_in? %>
 
-<%= link_to t('.new_frequentquestion'), new_frequentquestion_path if admin_signed_in?  %>
-
-<div >
-    <% @frequentquestions.each do |frequentquestion| %>
-      <%= render frequentquestion %>
-    <%= link_to t('common.edit'), edit_frequentquestion_path(frequentquestion) if admin_session %>
-    <%= link_to t('common.delete'), frequentquestion, data: {
-    turbo_method: :delete,
-    turbo_confirm: t('common.confirm')
-  } if admin_session %>
-  <% end %>
+  <div class="accordion" id="accordionExample">
+    <% @frequentquestions.each_with_index do |frequentquestion, index| %>
+      <div class="accordion-item">
+        <%= render partial: 'frequentquestion', locals: { index: index + 1, question: frequentquestion.question, answer: frequentquestion.answer, frequentquestion: frequentquestion } %>
+      </div>
+    <% end %>
+  </div>
 </div>

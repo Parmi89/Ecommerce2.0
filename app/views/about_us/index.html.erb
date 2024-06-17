@@ -1,10 +1,7 @@
-<div>
-  <%= link_to t('.new_aboutus'), new_about_u_path if current_admin %>
-</div>
-<div >
+<div style="display: flex; align-items: center; flex-direction: column;">
+  <%= link_to t('.new_aboutus'), new_about_u_path, class: "btn btn-sm btn-outline-secondary mb-3  mt-4" if current_admin %>
+  
   <% @about_us.each do |about_u| %>
     <%= render about_u %>
-    <%= link_to t('common.edit'), edit_about_u_path(about_u) if current_admin %>
   <% end %>
 </div>
-

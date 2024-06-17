@@ -21,7 +21,7 @@ class AboutUsController < ApplicationController
 
     respond_to do |format|
       if @about_u.save
-        format.html { redirect_to about_u_url(@about_u), notice: t('.created') }
+        format.html { redirect_to about_us_path, notice: t('.created') }
       else
         format.html { render :new, status: :unprocessable_entity }
       end
@@ -31,7 +31,7 @@ class AboutUsController < ApplicationController
   def update
     respond_to do |format|
       if @about_u.update(about_u_params)
-        format.html { redirect_to about_u_url(@about_u), notice: t('.update') }
+        format.html { redirect_to about_u_url(@about_u), notice: t('.updated') }
       else
         format.html { render :edit, status: :unprocessable_entity }
       end

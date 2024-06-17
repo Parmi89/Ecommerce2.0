@@ -1,10 +1,4 @@
-<h1><%= t('.editing_about') %></h1>
-
-<%= render "form", about_u: @about_u %>
-
-<br>
-
-<div>
-  <%= link_to t('common.show'), @about_u %> |
-  <%= link_to t('common.back'), about_us_path %>
+<div class="container mt-4">
+  <h1><%= t('.editing_about') %></h1>
+  <%= render "form", about_u: @about_u %>
 </div>
