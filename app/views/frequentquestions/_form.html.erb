@@ -22,9 +22,9 @@
           <%= form.text_area :answer, class: "form-control", placeholder: t('common.answer') %>
         </div>
 
-        <div class="mb-3">
+        <div class="mb-4">
          <%= form.submit t('common.accept'), class: "btn btn btn-primary mb-3" %>
-         
+         <%= link_to t('common.back'), frequentquestions_path, class: "btn btn btn-primary mb-3" %>
         </div>
       </div>
     </div>

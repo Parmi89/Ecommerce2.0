@@ -86,7 +86,9 @@ es:
     destroy:
       destroyed: La pregunta frecuente se elimino correctamente!!! 
     new:
-      new_frequentquestion: 'Agregar nueva pregunta frecuente'  
+      new_frequentquestion: 'Agregar nueva pregunta frecuente'
+    edit:
+      editing_frequentquestion: 'Editar preguntar frecuentes'  
   messages:
     create:
       created: 'Su mensaje se envio correctamente!!!'
@@ -137,7 +139,10 @@ es:
         current-password: 'Contraseña actual'
         close_my_account: 'Cerrar mi cuenta'
         cancel_my_account: 'Cancelar mi cuenta'
-        current password: 'Contraseña actual'
+        current_password: 'Contraseña actual'
+    sessions:  
+      new:
+        email_or_username: 'Correo electronico/usuario'  
   about_us:
     create:
       created: 'Quienes somos se cargo correctamente!!!'
