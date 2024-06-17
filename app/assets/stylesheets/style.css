@@ -26,3 +26,20 @@
 }
 
 
+.accordion-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  text-align: left;
+  padding: 1rem; /* Ajusta el padding según sea necesario */
+}
+
+.accordion-text {
+  flex-grow: 1; /* El texto ocupa todo el espacio disponible */
+}
+
+.accordion-arrow {
+  flex-shrink: 0; /* La flecha no crece, mantiene su tamaño original */
+  margin-left: 0.5rem; /* Ajusta el margen según sea necesario */
+}
