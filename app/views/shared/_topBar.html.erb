@@ -27,7 +27,7 @@
           <%= link_to t('.register'), new_user_registration_path, class: 'nav-link active' unless user_signed_in? || admin_signed_in? %>
         </li>
         <li class="nav-item">
-          <%= link_to t('common.logout'), destroy_user_session_path, class: 'nav-link active', data: { turbo_method: :delete, turbo_confirm: t('common.confirm') }, if: user_session %>
+          <%= link_to t('common.logout'), destroy_user_session_path, class: 'nav-link active', data: { turbo_method: :delete, turbo_confirm: t('common.confirm') } if user_session %>
         </li>
       </ul>
     </div>
