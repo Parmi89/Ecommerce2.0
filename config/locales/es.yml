@@ -40,7 +40,18 @@ es:
       users_account: 'Cuenta de usuarios'   
       messages: 'Mensajes'
     header:
-       welcome: "¡Bienvenido/a %{email}!"  
+       welcome: "¡Bienvenido/a %{email}!" 
+    footer:
+      helpful Links: 'Enlaces Útiles'
+      start: 'Ir al inicio'
+      about_us: 'Sobre nosotros'
+      frequentquestion: 'Preguntas frecuentes'
+      sign_up: 'Registrarse'
+      login: 'Ingresar'
+      social_networks: 'Redes sociales'
+      contact: 'Contacto'
+      copy: '2024. Todos los derechos reservados'      
+    
   categories:
     index:
       available_categories: 'Categorias disponibles'
@@ -158,6 +169,6 @@ es:
       new_aboutus: 'Nuevo Quienes somos'
     new:
       new_about_u: 'Nuevo Quienes somos'  
-
+ 
 
 

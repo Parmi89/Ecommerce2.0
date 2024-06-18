@@ -20,12 +20,7 @@
   box-shadow: 0 0 5px rgba(233, 102, 194, 0.5); /* Sombra al hacer focus */
 }
 
-/* CARROUSEL */
-.container{
-  padding: 2;
-}
-
-
+/* ACCORDION */
 .accordion-button {
   display: flex;
   align-items: center;
@@ -43,3 +38,4 @@
   flex-shrink: 0; /* La flecha no crece, mantiene su tamaño original */
   margin-left: 0.5rem; /* Ajusta el margen según sea necesario */
 }
+
