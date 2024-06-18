@@ -59,8 +59,9 @@ es:
           all_categories: "Todas las categorias:"
         searchBox:
           query_text: '¿Que estas buscando?'
-        form:    
+        edit:
           editing_product: 'Editar producto'
+        form:    
           name: 'Nombre del producto'
           price: 'Precio'
           description: 'Descripcion:'
