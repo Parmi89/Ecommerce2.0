@@ -11,8 +11,9 @@ class Product < ApplicationRecord
     tsearch: { prefix: true }
   }
 
-  has_many_attached :photos
+  
   belongs_to :category
   belongs_to :admin
+  has_many_attached :photos
  
 end

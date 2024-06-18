@@ -28,7 +28,7 @@ es:
     topBar:
       all_product: 'Todos los productos'
       about_us: 'Quienes somos'
-      frecuent_question: 'Preguntas frecuentes'
+      frequent_question: 'Preguntas frecuentes'
       my_account: 'Mi cuenta'
       welcome: 'Bienvenido '
       register: 'Registrarse'
@@ -59,9 +59,8 @@ es:
           all_categories: "Todas las categorias:"
         searchBox:
           query_text: '¿Que estas buscando?'
-        edit:
-          editing_product: 'Editar producto'  
         form:    
+          editing_product: 'Editar producto'
           name: 'Nombre del producto'
           price: 'Precio'
           description: 'Descripcion:'
