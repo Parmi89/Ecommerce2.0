@@ -43,7 +43,7 @@ es:
        welcome: "¡Bienvenido/a %{email}!"  
   categories:
     index:
-      available_categories: 'Categorias dispobibles'
+      available_categories: 'Categorias disponibles'
     edit:
       editingCategory: 'Editar categoria'
     create:
@@ -96,14 +96,13 @@ es:
       updated: 'Mensaje actualizado!!!'  
     destroy:
       destroyed: 'Mensaje eliminado!!!'
-    new:  
-      messenger_service: 'Mensajeria'
     message:
       sender: 'Remitente'
       title: 'Titulo del mensaje'
       body: 'Cuerpo del mensaje'    
       state: 'Estado'
     form:  
+      messenger_service: 'Mensajeria'
       other: 'Otro'  
       sender: 'Remitente'
       title: 'Titulo del mensaje'
