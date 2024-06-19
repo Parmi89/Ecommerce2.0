@@ -6,6 +6,7 @@ ps4:
   price: 150
   category: videogames
   admin_id: 1
+  amount: 2
  
 switch:
   name: Nintendo Switch
@@ -13,6 +14,7 @@ switch:
   price: 195
   category: videogames
   admin_id: 1
+  amount: 2
 
 nintendo64:
   name: Nintendo 64 en buen estado
@@ -20,6 +22,7 @@ nintendo64:
   price: 190
   category: videogames
   admin_id: 1
+  amount: 2
 
 megadrive:
   name: Sega Megadrive
@@ -27,6 +30,7 @@ megadrive:
   price: 90
   category: videogames
   admin_id: 1
+  amount: 2
 
 driver2:
   name: Driver 2 para ps1
@@ -34,6 +38,7 @@ driver2:
   price: 25
   category: videogames
   admin_id: 1
+  amount: 2
 
 ps5:
   name: PS5 nueva sin lector
@@ -41,6 +46,7 @@ ps5:
   price: 650
   category: videogames
   admin_id: 1
+  amount: 2
 
 gameboy:
   name: Game Boy Color
@@ -48,6 +54,7 @@ gameboy:
   price: 150
   category: videogames
   admin_id: 1
+  amount: 2
 
 air:
   name: Macbook Air
@@ -55,13 +62,14 @@ air:
   price: 250
   category: computers
   admin_id: 1
-
+  amount: 2
 imac:
   name: iMac 27" 2015
   description: i5 con 8gb de ram y SSD
   price: 90
   category: computers
   admin_id: 1
+  amount: 2
 
 ryzen:
   name: Ryzen 5950x
@@ -69,6 +77,7 @@ ryzen:
   price: 590
   category: computers
   admin_id: 1
+  amount: 2
 
 nvidia:
   name: Nvidia 3090ti
@@ -76,6 +85,7 @@ nvidia:
   price: 1500
   category: computers
   admin_id: 1
+  amount: 2
 
 ram:
   name: 16GB Ram DDR4 3200mhz
@@ -83,6 +93,7 @@ ram:
   price: 95
   category: computers
   admin_id: 1
+  amount: 2
 
 renault:
   name: Renault Clio 2009
@@ -90,6 +101,7 @@ renault:
   price: 4500
   category: cars
   admin_id: 1
+  amount: 2
 
 seat:
   name: Seat Panda clásico
@@ -97,6 +109,7 @@ seat:
   price: 5500
   category: cars
   admin_id: 1
+  amount: 2
 
 michael:
   name: Vinilo Michael Jackson Thriller
@@ -104,6 +117,7 @@ michael:
   price: 45
   category: music
   admin_id: 1
+  amount: 2
 
 queen:
   name: Vinilo Queen
@@ -111,6 +125,7 @@ queen:
   price: 35
   category: music
   admin_id: 1
+  amount: 2
 
 tv:
   name: Televisión LG 48 pulgadas
@@ -118,6 +133,7 @@ tv:
   price: 350
   category: electronic
   admin_id: 1
+  amount: 2
 
 kindle:
   name: Lector de libros Kindle 2010
@@ -125,6 +141,7 @@ kindle:
   price: 35
   category: electronic
   admin_id: 1
+  amount: 2
 
 ipod:
   name: iPod touch
@@ -132,6 +149,7 @@ ipod:
   price: 175
   category: electronic
   admin_id: 1
+  amount: 2
 
 harry:
   name: Colección entera de Harry Potter
@@ -139,6 +157,7 @@ harry:
   price: 65
   category: books
   admin_id: 1
+  amount: 2 
 
 hobbit:
   name: El hobbit
@@ -146,6 +165,7 @@ hobbit:
   price: 15
   category: books
   admin_id: 1
+  amount: 2
 
 iphone:
   name: iPhone 13
@@ -153,6 +173,7 @@ iphone:
   price: 400
   category: mobile
   admin_id: 1
+  amount: 2
 
 pixel:
   name: Google Pixel 4
@@ -160,6 +181,7 @@ pixel:
   price: 100
   category: mobile
   admin_id: 1
+  amount: 2
 
 surf:
   name: Tabla de surf
@@ -167,6 +189,7 @@ surf:
   price: 125
   category: sports
   admin_id: 1
+  amount: 2
 
 tennis:
   name: Raqueta de tenis profesional
@@ -174,6 +197,7 @@ tennis:
   price: 135
   category: sports
   admin_id: 1
+  amount: 2
 
 skate:
   name: Skateboard
@@ -181,3 +205,4 @@ skate:
   price: 75
   category: sports
   admin_id: 1
+  amount: 2

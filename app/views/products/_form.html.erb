@@ -37,6 +37,11 @@
             </div>
 
             <div class="mb-3">
+              <%= form.label :description, t('.amount'), class: "form-label" %>
+              <%= form.number_field :amount, class: 'form-control' %>
+            </div>
+
+            <div class="mb-3">
               <%= form.label :photos, t('.photo'), class: "form-label" %>
               <%= form.file_field :photos, multiple: true, class: 'form-control-file' %>
             </div>

@@ -3,6 +3,7 @@
   <h1><%= @product.name %></h1>
   <p><%= @product.description %></p>
   <span>$<%= @product.price %></span>
+  <p><%= @product.amount %></p>
 </div>
 <div>
   <%= link_to t('common.edit'), edit_product_path(@product) if admin_session %>
