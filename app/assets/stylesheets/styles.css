@@ -39,3 +39,7 @@
   margin-left: 0.5rem; /* Ajusta el margen según sea necesario */
 }
 
+/* SOMBRA A LOS LINKS*/
+.hover-link:hover {
+  background-color: #e9ecef; /* Cambia a un gris más claro o el color que desees */
+}

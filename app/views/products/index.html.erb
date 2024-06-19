@@ -1,6 +1,6 @@
 <%= turbo_frame_tag 'home' do %>
   <nav class="nav">
-    <span class="navbar-text">
+    <span class="navbar navbar-expand-lg navbar-light bg-light">
       <%= t(".all_categories") %>
     </span>
     <%= render partial: 'products/category', collection: @categories, class:"nav-link active"%>
