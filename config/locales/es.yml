@@ -50,21 +50,19 @@ es:
       login: 'Ingresar'
       social_networks: 'Redes sociales'
       contact: 'Contacto'
-      copy: '2024. Todos los derechos reservados'      
-    
+      copy: '2024. Todos los derechos reservados'        
   categories:
     index:
       available_categories: 'Categorias disponibles'
-    edit:
-      editingCategory: 'Editar categoria'
     create:
       created: 'La categoria se creo correctamente!!!'
     update:
       updated: 'La categoria se actualizo correctamente!!!'
     destroy:
       destroyed: 'La categoria se elimino correctamente!!!'   
-    new:
-      new_category: 'Categoria nueva'        
+    form:
+      new_category: 'Categoria nueva'  
+      name_cateogy: 'Nombre de categoria'      
   products:
         index:
           all_categories: "Todas las categorias:"
@@ -169,6 +167,27 @@ es:
       new_aboutus: 'Nuevo Quienes somos'
     new:
       new_about_u: 'Nuevo Quienes somos'  
- 
+  contacts:
+    create:
+      created: 'Los datos se cargaron correctamente!!!'
+    update:
+      updated: 'Los datos se actualizon correctamente!!!'
+    destroy:
+      destroyed: 'Los datos se eliminaron correctamente!!!' 
+    index:
+      add_info: 'Agregar nueva informacion'    
+    contact:
+      contact_details: 'Detalle para contacto'
+      facebook: 'Facebook:'
+      instagram: 'Instagram:'
+      phone: 'Telefono:'
+      address: 'Direccion:'
+    form:
+      contact_form: 'Formulario de contacto'
+      facebook: 'Facebook:'
+      instagram: 'Instagram:'
+      phone: 'Telefono:'
+      address: 'Direccion:'
+      save: 'Guardar'
 
 

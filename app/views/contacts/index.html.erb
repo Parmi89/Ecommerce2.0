@@ -1,6 +1,8 @@
-<div>
-  <% @contacts.each do |contact| %>
-    <%= render contact %>
-  <% end %>
-</div>
+<div class="container text-center mt-4">
+    <%= link_to t('.add_info'), new_contact_path, class: 'btn btn-primary' %>
+</div>  
+<% @contacts.each do |contact| %>
+  <%= render contact %>
+<% end %>
+
 

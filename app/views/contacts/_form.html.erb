@@ -2,7 +2,7 @@
   <div class="row justify-content-center">
     <div class="col-md-8">
       <div class="card">
-        <div class="card-header">Contact Form</div>
+      <div class="card-header"><%= t('.contact_form') %></div>
         <div class="card-body">
           <%= form_with(model: contact, html: { class: "form" }) do |form| %>
             <% if contact.errors.any? %>
@@ -17,33 +17,33 @@
             <% end %>
 
             <div class="form-group">
-              <%= form.label :email, class: "control-label" %>
-              <%= form.text_field :email, class: "form-control" %>
+              <%= t('common.email')%>
+              <%= form.text_field :email, class: "form-control"%>
             </div>
 
             <div class="form-group">
-              <%= form.label :facebook, class: "control-label" %>
+              <%= t('.Facebook')%>
               <%= form.text_field :facebook, class: "form-control" %>
             </div>
 
             <div class="form-group">
-              <%= form.label :instagram, class: "control-label" %>
+              <%= t('instagram')%>
               <%= form.text_field :instagram, class: "form-control" %>
             </div>
 
             <div class="form-group">
-              <%= form.label :phone, class: "control-label" %>
+              <%= t('.phone')%>
               <%= form.text_field :phone, class: "form-control" %>
             </div>
 
             <div class="form-group">
-              <%= form.label :address, class: "control-label" %>
+              <%= t('.address')%>
               <%= form.text_field :address, class: "form-control" %>
             </div>
 
-            <div class="form-group">
-              <%= form.submit "Save", class: "btn btn-primary" %>
-              <%= link_to "Ver datos actuales", contacts_path, class: 'btn btn-secondary' %>
+            <div class="form-group mt-2">
+              <%= form.submit t('.save'), class: "btn btn-primary" %>
+              <%= link_to t('common.back'), contacts_path, class: 'btn btn-secondary' %>
             </div>
           <% end %>
         </div>
