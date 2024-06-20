@@ -1,0 +1,42 @@
+<div class="container mt-2">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header"><%= t('contact_details') %></div>
+        <div class="card-body">
+          <div id="<%= dom_id contact %>">
+            <p>
+              <strong>Email:</strong>
+              <%= contact.email %>
+            </p>
+
+            <p>
+              <strong>Facebook:</strong>
+              <%= contact.facebook %>
+            </p>
+
+            <p>
+              <strong>Instagram:</strong>
+              <%= contact.instagram %>
+            </p>
+
+            <p>
+              <strong>Phone:</strong>
+              <%= contact.phone %>
+            </p>
+
+            <p>
+              <strong>Address:</strong>
+              <%= contact.address %>
+            </p>
+          </div>
+        </div>
+        <div class="card-footer">
+          <%= link_to "Edit", edit_contact_path(contact), class: 'btn btn-primary' %>
+          <%= link_to "New contact", new_contact_path, class: 'btn btn-primary' %>
+          <%= link_to "Destroy this contact", @contact, class: 'btn btn-primary', method: :delete %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

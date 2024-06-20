@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :contacts
 
   namespace :admin do
     resources :users, only: [:index, :edit, :update, :destroy]

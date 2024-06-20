@@ -1,6 +1,7 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: %i[ edit update destroy ]
   before_action :check_admin
+  include CheckAdmin
 
   def index
     @categories = Category.order(name: :asc)
@@ -50,11 +51,5 @@ class CategoriesController < ApplicationController
 
     def category_params
       params.require(:category).permit(:name)
-    end
-
-    def check_admin
-      unless current_admin 
-        redirect_to products_path, alert: t('common.not_admin')
-      end
     end
 end

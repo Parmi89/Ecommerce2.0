@@ -1,6 +1,8 @@
 class AboutUsController < ApplicationController
   before_action :set_about_u, only: %i[ show edit update destroy ]
   before_action :check_admin, only: [:new, :create,:edit, :update, :destroy]
+  include CheckAdmin
+
 
   def index
     @about_us = AboutU.all
@@ -54,10 +56,4 @@ class AboutUsController < ApplicationController
     def about_u_params
       params.require(:about_u).permit(:title, :body)
     end
-
-    def check_admin
-      unless current_admin 
-        redirect_to products_path, alert: t('common.not_admin')
-      end
-    end  
 end

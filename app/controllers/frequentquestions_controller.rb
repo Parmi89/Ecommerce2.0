@@ -1,6 +1,7 @@
 class FrequentquestionsController < ApplicationController
   before_action :authenticate_admin!, except: [:index]
   before_action :set_frequentquestion, only: %i[edit update destroy ]
+  include CheckAdmin
   
   def index
     @frequentquestions = Frequentquestion.all

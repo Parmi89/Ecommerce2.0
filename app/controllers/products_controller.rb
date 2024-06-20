@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: %i[ show edit update destroy ]
   before_action :check_admin, only: [:create,:new, :edit, :update]
+  include CheckAdmin
   
   def index
     @categories = Category.order(name: :asc).load_async
@@ -63,11 +64,5 @@ class ProductsController < ApplicationController
     def product_params_index
       params.permit(:query_text, :page, :category_id)
     end
-
-  def check_admin
-    unless current_admin 
-      redirect_to products_path, alert: t('common.not_admin')
-    end
-  end
 end
 

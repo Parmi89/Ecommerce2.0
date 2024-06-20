@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
   before_action :set_message, only: %i[ show edit update destroy ]
   before_action :check_admin, only: [:index,:edit, :update, :destroy]
+  include CheckAdmin
 
   def index
     @messages = Message.order(state: :desc, created_at: :desc)
@@ -58,9 +59,5 @@ class MessagesController < ApplicationController
       params.require(:message).permit(:sender, :title, :body, :response_type, :state)
     end
 
-    def check_admin
-      unless current_admin 
-        redirect_to products_path, alert: t('common.not_admin')
-      end
-    end  
+    
 end
