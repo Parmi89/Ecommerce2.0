@@ -23,7 +23,7 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       if @contact.save
-        format.html { redirect_to contact_url(@contact), notice: t('.created') }
+        format.html { redirect_to contacts_path(@contact), notice: t('.created') }
         format.json { render :show, status: :created, location: @contact }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -37,10 +37,8 @@ class ContactsController < ApplicationController
     respond_to do |format|
       if @contact.update(contact_params)
         format.html { redirect_to contact_url(@contact), notice: t('.updated') }
-        format.json { render :show, status: :ok, location: @contact }
       else
         format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @contact.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -51,7 +49,6 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to contacts_url, notice: t('.destroyed') }
-      format.json { head :no_content }
     end
   end
 

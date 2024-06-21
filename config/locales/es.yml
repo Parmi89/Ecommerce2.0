@@ -189,5 +189,6 @@ es:
       phone: 'Telefono:'
       address: 'Direccion:'
       save: 'Guardar'
-
-
+      placeholder_facebook: "Ingresa solo el id o usuario de Facebook"
+      placeholder_instagram: "Ingresa solo el id o usuario de Instagram"
+ 
