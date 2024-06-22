@@ -32,7 +32,8 @@
       <% if admin_session %>
         <div>
           <%= link_to t('common.edit'), edit_product_path(@product), class: "btn btn-primary" %>
-          <%= link_to t('common.delete'), product_path(@product), method: :delete, data: { confirm: t('common.confirm') }, class: "btn btn-danger", remote: true %>
+          <%= link_to t('common.delete'),product_path(@product), class: "btn btn-danger", data: { turbo_method: :delete, turbo_confirm: t('common.confirm')} %>
+
         </div>
       <% end %>
     </div>

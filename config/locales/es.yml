@@ -149,6 +149,7 @@ es:
         close_my_account: 'Cerrar mi cuenta'
         cancel_my_account: 'Cancelar mi cuenta'
         current_password: 'Contraseña actual'
+        placeholder_current_password: 'Contraseña actual/ Necesaria para confirmar cambios'
     sessions:  
       new:
         email_or_username: 'Correo electronico/usuario'  
