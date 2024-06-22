@@ -2,18 +2,16 @@
   <div class="row">
     <hr>
     <div class="col-md-4">
-      <!-- Columna 1 -->
       <h5><%= t('.helpful Links')%></h5>
       <ul class="list-unstyled">
         <li><%= link_to t('.start'), products_path %></li>
         <li><%= link_to t('.about_us'), about_us_path %></li>
         <li><%= link_to t('.frequentquestion'), frequentquestions_path %></li>
-        <li><%= link_to t('.sign_up'), user_session_path %></li>
+        <li><%= link_to t('.sign_up'), new_user_registration_path %></li>
         <li><%= link_to t('.login'), new_user_session_path %></li>
       </ul>
     </div>
     <div class="col-md-4">
-      <!-- Columna 2 -->
       <h5><%= t('.social_networks')%></h5>
       <ul class="list-unstyled mt-4">
         <% @contacts.each do |contact| %>
