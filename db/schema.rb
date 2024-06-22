@@ -95,20 +95,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_19_233635) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "info_users", force: :cascade do |t|
-    t.string "last_name", null: false
-    t.string "name", null: false
-    t.string "province", null: false
-    t.string "location", null: false
-    t.string "street", null: false
-    t.integer "number", null: false
-    t.integer "cell", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "user_id", null: false
-    t.index ["user_id"], name: "index_info_users_on_user_id"
-  end
-
   create_table "messages", force: :cascade do |t|
     t.string "sender", null: false
     t.string "title", null: false
@@ -117,13 +103,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_19_233635) do
     t.string "state", default: "pending"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "photos", force: :cascade do |t|
-    t.bigint "product_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["product_id"], name: "index_photos_on_product_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -154,8 +133,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_19_233635) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "info_users", "users"
-  add_foreign_key "photos", "products"
   add_foreign_key "products", "admins"
   add_foreign_key "products", "categories"
 end
