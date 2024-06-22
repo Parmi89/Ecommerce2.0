@@ -1,13 +1,40 @@
-<div>
-  <%= @product.photos.attached? ? @product.photos.map { |photo| image_tag photo, width: 200 }.join.html_safe : image_tag('no-photo.jpg', width: 300) %>
-  <h1><%= @product.name %></h1>
-  <p><%= @product.description %></p>
-  <span>$<%= @product.price %></span>
-</div>
-<div>
-  <%= link_to t('common.edit'), edit_product_path(@product) if admin_session %>
-  <%= link_to t('common.delete'), product_path(@product), data: {
-  turbo_method: :delete,
-  turbo_confirm: t('common.confirm')
-} if admin_session %>
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-6">
+      <div id="product-carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <% @product.photos.each_with_index do |photo, index| %>
+            <div class="carousel-item <%= 'active' if index == 0 %>">
+              <%= image_tag photo, class: "d-block w-100 img-fluid rounded" %>
+            </div>
+          <% end %>
+          <% unless @product.photos.attached? %>
+            <div class="carousel-item active">
+              <%= image_tag 'no-photo.jpg', class: "d-block w-100 img-fluid rounded" %>
+            </div>
+          <% end %>
+        </div>
+        <a class="carousel-control-prev" href="#product-carousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#product-carousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h1><%= @product.name %></h1>
+      <p><%= @product.description %></p>
+      <p><strong>Precio:</strong> $<%= @product.price %></p>
+      <p><strong>Cantidad disponibles:</strong> <%= @product.amount %></p>
+      <% if admin_session %>
+        <div>
+          <%= link_to t('common.edit'), edit_product_path(@product), class: "btn btn-primary" %>
+          <%= link_to t('common.delete'), product_path(@product), method: :delete, data: { confirm: t('common.confirm') }, class: "btn btn-danger", remote: true %>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>

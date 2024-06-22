@@ -18,7 +18,7 @@
           <%= link_to t('.messages'), messages_path, class: "nav-link active" %>
         </li>
         <li class="nav-item hover-link">
-          <%= link_to t('.Configuration'), contacts_path, class: "nav-link active" %>
+          <%= link_to t('.configuration'), contacts_path, class: "nav-link active" %>
         </li>
         <li class="nav-item hover-link">
           <%= link_to t('common.logout'), destroy_admin_session_path(), class: "nav-link active", data: { turbo_method: :delete, turbo_confirm: t('common.confirm') } if admin_session %>

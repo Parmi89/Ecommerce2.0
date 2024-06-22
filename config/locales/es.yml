@@ -39,6 +39,7 @@ es:
       categories: 'Categorias'
       users_account: 'Cuenta de usuarios'   
       messages: 'Mensajes'
+      configuration: "Configuraciones"
     header:
        welcome: "¡Bienvenido/a %{email}!" 
     footer:
