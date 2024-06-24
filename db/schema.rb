@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_06_19_233635) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_23_221943) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -95,6 +95,20 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_19_233635) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "info_users", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "location"
+    t.string "province"
+    t.string "street"
+    t.integer "number"
+    t.integer "cell"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_info_users_on_user_id"
+  end
+
   create_table "messages", force: :cascade do |t|
     t.string "sender", null: false
     t.string "title", null: false
@@ -133,6 +147,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_19_233635) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "info_users", "users"
   add_foreign_key "products", "admins"
   add_foreign_key "products", "categories"
 end

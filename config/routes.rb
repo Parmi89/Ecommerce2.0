@@ -1,9 +1,16 @@
 Rails.application.routes.draw do
-  resources :contacts
 
   namespace :admin do
     resources :users, only: [:index, :edit, :update, :destroy]
   end
+
+  namespace :user do
+    resource :info_user, only: [:show, :edit, :update]
+  end  
+
+ 
+  resources :contacts
+
   resources :about_us  
   resources :frequentquestions
   resources :categories
