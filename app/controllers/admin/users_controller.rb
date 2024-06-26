@@ -3,6 +3,7 @@ class Admin::UsersController < ApplicationController
 
   def index
     @users = User.all
+    @info_users = InfoUser.all
   end
 
   def edit
@@ -29,6 +30,10 @@ class Admin::UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name, :email, :username,:password)
+  end
+
+  def info_user_params
+    params.require(:info_user).permit(:first_name, :last_name, :location, :province, :street, :number, :cell, :user_id)
   end
 end
   

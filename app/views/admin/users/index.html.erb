@@ -1,6 +1,26 @@
 <div class="container text-center mt-4">
   <h2><%= t('.users_list') %> </h2>
 </div>
-
-<%= render partial: 'user', collection: @users %>
-  
+<div class="container text-center mt-4">
+  <h5><%= t('.total_accounts') %> <%= @users.count %> </h5>
+</div>
+<div class="container">
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th class="text-center" style="width: 5%;"><%= t('.id')%></th>
+          <th class="text-center" style="width: 15%;"><%= t('.last_name')%></th>
+          <th class="text-center" style="width: 15%;"><%= t('.first_name')%></th>
+          <th class="text-center" style="width: 20%;"><%= t('common.email')%></th>
+          <th class="text-center" style="width: 15%;"><%= t('.accion')%></th>
+          <th class="text-center" style="width: 15%;"><%= t('.see_data')%></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <%= render partial: 'user', collection: @users, locals: { info_users: @info_users } %>
+      </tbody>
+        </table>
+      </div>
+    </div>

@@ -13,7 +13,7 @@ class User::InfoUsersController < ApplicationController
   # PATCH /users/info_user
   def update
     if @info_user.update(info_user_params)
-      redirect_to user_info_user_path(current_user), notice: 'Información actualizada correctamente.'
+      redirect_to user_info_user_path(current_user), notice: t('.updated')
     else
       render :edit
     end

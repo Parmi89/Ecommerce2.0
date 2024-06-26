@@ -24,6 +24,7 @@ es:
     answer: 'Respuesta'
     not_admin: 'Acceso no autorizado. Debes ser administrador para acceder a esta página.'
     show: 'Ver'
+    save: 'Guardar'
   shared:
     topBar:
       all_product: 'Todos los productos'
@@ -51,7 +52,29 @@ es:
       login: 'Ingresar'
       social_networks: 'Redes sociales'
       contact: 'Contacto'
-      copy: '2024. Todos los derechos reservados'        
+      copy: '2024. Todos los derechos reservados'  
+  user:
+    info_users:
+      update:
+        updated: 'Información actualizada correctamente !!!'
+      info_user:
+        your_personal_data: 'Tu informacion personal'
+        first_name: 'Nombre'    
+        last_name: 'Apellido'
+        province: 'Provincia'
+        location: 'Localidad'
+        street: 'Calle'
+        number: 'Numero'
+        cell: 'Celular'   
+      form:
+        edit_info_user: 'Modifica tu informacion personal'
+        first_name: 'Nombre'    
+        last_name: 'Apellido'
+        province: 'Provincia'
+        location: 'Localidad'
+        street: 'Calle'
+        number: 'Numero'
+        cell: 'Celular'      
   categories:
     index:
       available_categories: 'Categorias disponibles'
@@ -132,8 +155,11 @@ es:
       destroy:
         destroyed: 'Usuario eliminado correctamente!!!'
       index:
-        users_list: 'Lista de usuarios'  
-      user:
+        users_list: 'Lista de usuarios' 
+        total_accounts: 'Cuentas totales: ' 
+        last_name: 'Apellido'
+        first_name: 'Nombres'
+        accion: 'Accion'
         see_data: 'Ver informacion'
       form:
         change_password: 'Contraseña nueva' 
@@ -150,6 +176,7 @@ es:
         cancel_my_account: 'Cancelar mi cuenta'
         current_password: 'Contraseña actual'
         placeholder_current_password: 'Contraseña actual/ Necesaria para confirmar cambios'
+        my_information_personal: 'Mi informacion personal'
     sessions:  
       new:
         email_or_username: 'Correo electronico/usuario'  
