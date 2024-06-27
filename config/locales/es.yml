@@ -148,12 +148,13 @@ es:
       destroy:
         destroyed: 'Usuario eliminado correctamente!!!'
       index:
+        query_user: 'Busar usuario por Id, email, apellido o nombre'
         users_list: 'Lista de usuarios' 
-        total_accounts: 'Cuentas totales: ' 
+        total_accounts: 'Listando: ' 
         last_name: 'Apellido'
         first_name: 'Nombres'
         accion: 'Accion'
-        see_data: 'Ver informacion'
+        no_data: 'No se encontraron usuarios con esa descripcion.'
       show:
         user_id: 'Usurario N°'
         user_address_information: 'Direccion'  

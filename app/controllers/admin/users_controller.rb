@@ -2,8 +2,11 @@ class Admin::UsersController < ApplicationController
   before_action :authenticate_admin!
 
   def index
-    @users = User.all
-    @info_users = InfoUser.all
+    if params[:query].present?
+      @users = User.includes(:info_user).search_by_term(params[:query])
+    else
+      @users = User.includes(:info_user).all
+    end
   end
 
   def show
