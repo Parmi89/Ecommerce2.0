@@ -25,6 +25,13 @@ es:
     not_admin: 'Acceso no autorizado. Debes ser administrador para acceder a esta página.'
     show: 'Ver'
     save: 'Guardar'
+    first_name: 'Nombre'    
+    last_name: 'Apellido'
+    province: 'Provincia'
+    location: 'Localidad'
+    street: 'Calle'
+    number: 'Numero'
+    cell: 'Celular' 
   shared:
     topBar:
       all_product: 'Todos los productos'
@@ -58,23 +65,9 @@ es:
       update:
         updated: 'Información actualizada correctamente !!!'
       info_user:
-        your_personal_data: 'Tu informacion personal'
-        first_name: 'Nombre'    
-        last_name: 'Apellido'
-        province: 'Provincia'
-        location: 'Localidad'
-        street: 'Calle'
-        number: 'Numero'
-        cell: 'Celular'   
+        your_personal_data: 'Tu informacion personal' 
       form:
-        edit_info_user: 'Modifica tu informacion personal'
-        first_name: 'Nombre'    
-        last_name: 'Apellido'
-        province: 'Provincia'
-        location: 'Localidad'
-        street: 'Calle'
-        number: 'Numero'
-        cell: 'Celular'      
+        edit_info_user: 'Modifica tu informacion personal'     
   categories:
     index:
       available_categories: 'Categorias disponibles'
@@ -161,6 +154,10 @@ es:
         first_name: 'Nombres'
         accion: 'Accion'
         see_data: 'Ver informacion'
+      show:
+        user_id: 'Usurario N°'
+        user_address_information: 'Direccion'  
+        user_personal_information: 'Informacion personal'
       form:
         change_password: 'Contraseña nueva' 
         confirm_new_password: 'Confirmar contraseña nueva' 

@@ -1,0 +1,61 @@
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+      <div class="card shadow">
+        <div class="card-header text-center"><%= t('.user_id') %><%= @user.id %></div>
+        <div class="card-body">
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <h5 class="text-center mb-3"><%= t('.user_personal_information') %></h5>
+                  <hr>
+                  <div class="text-center">
+                    <strong><%= t('common.last_name') %></strong>
+                    <p><%= @user.info_user.last_name %></p>
+                  </div>
+                  <div class="text-center">
+                    <strong><%= t('common.first_name') %></strong>
+                    <p><%= @user.info_user.first_name %></p>
+                  </div>
+                  <div class="text-center">
+                    <strong><%= t('common.email') %></strong>
+                    <p><%= @user.email %></p>
+                  </div>
+                  <div class="text-center">
+                    <strong><%= t('common.cell') %></strong>
+                    <p><%= @user.info_user.cell %></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <h5 class="text-center mb-3"><%= t('.user_address_information') %></h5>
+                   <hr>
+                  <div class="text-center">
+                    <strong><%= t('common.location') %></strong>
+                    <p><%= @user.info_user.location %></p>
+                  </div>
+                  <div class="text-center">
+                    <strong><%= t('common..province') %></strong>
+                    <p><%= @user.info_user.province %></p>
+                  </div>
+                  <div class="text-center">
+                    <strong><%= t('common.street') %></strong>
+                    <p><%= @user.info_user.street %></p>
+                  </div>
+                  <div class="text-center">
+                    <strong><%= t('common.number') %></strong>
+                    <p><%= @user.info_user.number %></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center mt-4">
+              <%= link_to t('common.back'), admin_users_path, class: 'btn btn-secondary me-2' %>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
