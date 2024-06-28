@@ -1,15 +1,13 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
-  sender: MyString
-  title: MyString
-  body: MyString
-  response_type: MyString
-  state: MyString
+  sender: user1
+  title: Consulta compra
+  body: Buenos dias realice una compra el dia de ayer...
+  response_type: email
+  state: pending
 
 two:
-  sender: MyString
-  title: MyString
-  body: MyString
-  response_type: MyString
-  state: MyString
+  sender: user2
+  title: Reclamo
+  body: No me estan contestando los msjs que mande.
+  response_type: other
+  state: pending

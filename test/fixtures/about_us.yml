@@ -1,9 +1,4 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
-  title: MyString
-  body: MyString
+  title: Sublimate
+  body: 'Somos una empresa joven dedicada a la sublimacion y venta de productos varios, nuestro enfoque....'
 
-two:
-  title: MyString
-  body: MyString
