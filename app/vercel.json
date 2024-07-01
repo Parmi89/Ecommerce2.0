@@ -1,13 +1,13 @@
 {
   "builds": [
     {
-      "src": "./products",
+      "src": "./views/layouts/application.html.erb",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/",
       "dest": "/"
     }
   ]
