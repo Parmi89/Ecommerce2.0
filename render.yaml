@@ -1,7 +1,7 @@
 databases:
   - name: ecommerce2_0
     databaseName: ecommerce2_0
-    user: edgarparmi
+    user: parmi
     plan: free
 
 services:
