@@ -17,7 +17,9 @@ Rails.application.routes.draw do
   resources :messages
   devise_for :admins
   devise_for :users
-  resources :products, path: '/'
+  resources :products
+
+  root "products#index"
  
   
 end
