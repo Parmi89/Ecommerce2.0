@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <ul class="list-group">
+        <li class="list-group-item">
+          <strong><%= t('common.name') %></strong>: <%= category.name %>
+        </li>
+        <li class="list-group-item">
+          <%= link_to t('common.edit'), edit_category_path(category), class: "btn btn-primary btn-sm btn-block" %>
+          <%= link_to t('common.delete'), category_path(category), class: "btn btn-danger btn-sm", data: { turbo_method: :delete, turbo_confirm: t('common.confirm')} %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+

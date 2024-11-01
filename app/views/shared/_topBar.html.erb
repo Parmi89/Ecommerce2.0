@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav ">
+        <li class="nav-item hover-link">
+          <%= link_to t('.all_product'), products_path, class: 'nav-link active' %>
+        </li>
+        <li class="nav-item hover-link">
+          <%= link_to t('.about_us'), about_us_path, class: 'nav-link active' %> 
+        </li>
+        <li class="nav-item hover-link">
+          <%= link_to t('.frequent_question'), frequentquestions_path, class: 'nav-link active' %>   
+        </li>
+        <li class="nav-item hover-link">
+          <%= link_to t('.contact_us'), new_message_path, class: 'nav-link active' unless admin_signed_in? %>  
+        </li>
+        <li class="nav-item hover-link">
+          <%= link_to t('.my_account'), edit_user_registration_path, class: 'nav-link active' if user_signed_in? %>  
+        </li>
+        <li class="nav-item hover-link">
+          <%= link_to t('common.log_in'), new_user_session_path, class: 'nav-link active' unless user_signed_in? || admin_signed_in? %>
+        </li>
+        <li class="nav-item hover-link">
+          <%= link_to t('.register'), new_user_registration_path, class: 'nav-link active' unless user_signed_in? || admin_signed_in? %>
+        </li>
+        <li class="nav-item hover-link">
+          <%= link_to t('common.logout'), destroy_user_session_path, class: 'nav-link active', data: { turbo_method: :delete, turbo_confirm: t('common.confirm') } if user_session %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+

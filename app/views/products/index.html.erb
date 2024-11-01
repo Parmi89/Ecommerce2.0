@@ -1,0 +1,19 @@
+<%= turbo_frame_tag 'home' do %>
+  <nav class="nav">
+    <span class="navbar navbar-expand-lg navbar-light bg-light">
+      <strong><%= t(".all_categories") %></strong>
+    </span>
+    <%= render partial: 'products/category', collection: @categories, class:"nav-link active"%>
+  </nav>  
+  <%= turbo_frame_tag "products-#{@pagy.page}", class: 'products' do %>
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+         <%= render partial: 'product', collection: @products%>
+      </div>
+    </div>
+     <%= turbo_frame_tag "products-#{@pagy.next}", class: 'products', src: pagy_url_for(@pagy, @pagy.next), loading: :lazy if @pagy.next %>
+  <% end %>  
+<% end %>
+
+
+

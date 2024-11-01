@@ -1,0 +1,28 @@
+<div class="container mt-4">
+  <%= form_with(model: about_u) do |form| %>
+    <% if about_u.errors.any? %>
+      <div class="alert alert-danger">
+        <h2><%= pluralize(about_u.errors.count, "error") %> prohibited this about_u from being saved:</h2>
+
+        <ul>
+          <% about_u.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="mb-3">
+      <%= form.text_field :title, class: "form-control", placeholder: t('.title') %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.rich_text_area :body, class: "form-control", placeholder: t('.body') %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.submit t('common.accept'), class: "btn btn-primary" %>
+      <%= link_to t('common.back'), about_us_path, class:"btn btn btn-outline-secondary" %>
+    </div>
+  <% end %>
+</div>

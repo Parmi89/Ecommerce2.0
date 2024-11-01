@@ -1,0 +1,7 @@
+<div style="display: flex; align-items: center; flex-direction: column;">
+  <%= link_to t('.new_aboutus'), new_about_u_path, class: "btn btn-sm btn-outline-secondary mb-3  mt-4" if current_admin %>
+  
+  <% @about_us.each do |about_u| %>
+    <%= render about_u %>
+  <% end %>
+</div>

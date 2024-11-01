@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-12">
+      <div class="card p-4" style="border-radius: 8px; border: 1px solid #ccc;">
+        <%= form_with(model: product, class: "my-4") do |form| %>
+          <div class="card p-4" style="background-color: #f8f9fa; border-radius: 8px; border: 1px solid #ccc;">
+            <% if @product.errors.any? %>
+              <div class="alert alert-danger">
+                <ul>
+                  <% @product.errors.full_messages.each do |error| %>
+                    <li><%= error %></li>
+                  <% end %>
+                </ul>
+              </div>
+            <% end %>
+
+            <%= form.hidden_field :admin_id, value: current_admin.id %>
+
+            <div class="mb-3">
+              <%= form.label :name, t('.name'), class: "form-label" %>
+              <%= form.text_field :name, class: 'form-control' %>
+            </div>
+
+            <div class="mb-3">
+              <%= form.label :price, t('.price'), class: "form-label" %>
+              <%= form.text_field :price, class: 'form-control' %>
+            </div>
+
+            <div class="mb-3">
+              <%= form.label :description, t('.description'), class: "form-label" %>
+              <%= form.rich_text_area :description, class: 'form-control' %>
+            </div>
+
+            <div class="mb-3">
+              <%= form.label :category_id, t('.select_category'), class: "form-label" %>
+              <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name, { include_blank: true }, { class: 'form-control' } %>
+            </div>
+
+            <div class="mb-3">
+              <%= form.label :description, t('.amount'), class: "form-label" %>
+              <%= form.number_field :amount, class: 'form-control' %>
+            </div>
+
+            <div class="mb-3">
+              <%= form.label :photos, t('.photo'), class: "form-label" %>
+              <%= form.file_field :photos, multiple: true, class: 'form-control-file' %>
+            </div>
+
+            <div class="text-center">
+              <%= form.submit t('common.accept'), class: 'btn btn-primary' %>
+              <%= link_to t('common.back'), @product,class: 'btn btn-primary' %> 
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+        

@@ -1,0 +1,53 @@
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+      <div class="card-header"><%= t('.contact_form') %></div>
+        <div class="card-body">
+          <%= form_with(model: contact, html: { class: "form" }) do |form| %>
+            <% if contact.errors.any? %>
+              <div class="alert alert-danger">
+                <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+                <ul>
+                  <% contact.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                </ul>
+              </div>
+            <% end %>
+
+            <div class="form-group">
+              <%= t('common.email')%>
+              <%= form.text_field :email, class: "form-control"%>
+            </div>
+
+            <div class="form-group">
+              <%= t('.Facebook')%>
+              <%= form.text_field :facebook, placeholder:t('.placeholder_facebook'), class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+              <%= t('instagram')%>
+              <%= form.text_field :instagram, placeholder:t('.placeholder_instagram'), class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+              <%= t('.phone')%>
+              <%= form.text_field :phone, class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+              <%= t('.address')%>
+              <%= form.text_field :address, class: "form-control" %>
+            </div>
+
+            <div class="form-group mt-2">
+              <%= form.submit t('.save'), class: "btn btn-primary" %>
+              <%= link_to t('common.back'), contacts_path, class: 'btn btn-secondary' %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

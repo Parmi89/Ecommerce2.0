@@ -1,0 +1,11 @@
+<tr>
+  <td class="text-center"><%= user.id %></td>
+  <td class="text-center"><%= user.info_user.last_name %></td>
+  <td class="text-center"><%= user.info_user.first_name %></td>
+  <td class="text-center"><%= user.email %></td>
+  <td class="text-center">
+    <%= link_to t('common.show'), admin_user_path(user), class: "btn btn-info btn-sm mb-1" %>
+    <%= link_to t('common.edit'), edit_admin_user_path(user), class: "btn btn-primary btn-sm mb-1 me-1" %>
+    <%= link_to t('common.delete'), admin_user_path(user), class: "btn btn-danger btn-sm mb-1", data: { turbo_method: :delete, turbo_confirm: t('common.confirm') } %>
+  </td>
+</tr>

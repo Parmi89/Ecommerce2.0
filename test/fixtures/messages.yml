@@ -1,0 +1,13 @@
+one:
+  sender: user1
+  title: Consulta compra
+  body: Buenos dias realice una compra el dia de ayer...
+  response_type: email
+  state: pending
+
+two:
+  sender: user2
+  title: Reclamo
+  body: No me estan contestando los msjs que mande.
+  response_type: other
+  state: pending

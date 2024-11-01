@@ -1,0 +1,33 @@
+<%= form_with(model: frequentquestion) do |form| %>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <% if frequentquestion.errors.any? %>
+          <div class="alert alert-danger">
+            <h2><%= pluralize(frequentquestion.errors.count, "error") %> prohibited this frequentquestion from being saved:</h2>
+
+            <ul>
+              <% frequentquestion.errors.each do |error| %>
+                <li><%= error.full_message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="mb-3">
+          <%= form.text_field :question, class: "form-control", placeholder: t('common.question') %>
+        </div>
+
+        <div class="mb-3">
+          <%= form.text_area :answer, class: "form-control", placeholder: t('common.answer') %>
+        </div>
+
+        <div class="mb-4">
+         <%= form.submit t('common.accept'), class: "btn btn btn-primary mb-3" %>
+         <%= link_to t('common.back'), frequentquestions_path, class: "btn btn btn-primary mb-3" %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
