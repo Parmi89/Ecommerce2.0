@@ -1,0 +1,64 @@
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header"><%= t('.edit_info_user') %></div>
+        <div class="card-body">
+          <%= form_with(model: [User, info_user]) do |form| %>
+            <% if info_user.errors.any? %>
+              <div class="alert alert-danger">
+                <h2><%= pluralize(info_user.errors.count, "error") %> prohibited this info_user from being saved:</h2>
+                <ul>
+                  <% info_user.errors.each do |error| %>
+                    <li><%= error.full_message %></li>
+                  <% end %>
+                </ul>
+              </div>
+            <% end %>
+
+            <div class="row">
+              <div class="col-sm-6">
+                <div>
+                 <%= t('common.first_name') %>
+                  <%= form.text_field :first_name, class: "form-control" %>
+                </div>             
+                 <div>
+                 <%= t('common.location') %>
+                  <%= form.text_field :location, class: "form-control" %>
+                </div>                            
+                <div>
+                  <%= t('common.street') %>
+                  <%= form.text_field :street, class: "form-control" %>
+                </div>             
+                <div>
+                  <%= t('common.cell') %>
+                  <%= form.number_field :cell, class: "form-control" %>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div>
+                  <%= t('common.last_name') %>
+                  <%= form.text_field :last_name, class: "form-control" %>
+                </div>
+                <div>
+                  <%= t('common.province') %>
+                  <%= form.text_field :province, class: "form-control" %>
+                </div> 
+                <div>
+                  <%= t('common.number') %>
+                  <%= form.number_field :number, class: "form-control" %>
+                </div>             
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col">
+                <%= form.submit  t('common.save'), class: "btn btn-primary" %>
+                <%= link_to t('common.back'), user_info_user_path(@info_user), class: 'btn btn-secondary ml-2 ' %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

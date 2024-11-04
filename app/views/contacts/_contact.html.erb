@@ -1,0 +1,41 @@
+<div class="container mt-2">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header"><%= t('.contact_details') %></div>
+        <div class="card-body">
+          <div>
+            <p>
+              <strong><%= t('common.email')%></strong>
+              <%= contact.email %>
+            </p>
+
+            <p>
+              <strong><%= t('.facebook')%></strong>
+              <%= contact.facebook %>
+            </p>
+
+            <p>
+              <strong><%= t('.instagram')%></strong>
+              <%= contact.instagram %>
+            </p>
+
+            <p>
+              <strong><%= t('.phone')%></strong>
+              <%= contact.phone %>
+            </p>
+
+            <p>
+              <strong><%= t('.address')%></strong>
+              <%= contact.address %>
+            </p>
+          </div>
+        </div>
+        <div class="card-footer">
+          <%= link_to t('common.edit'), edit_contact_path(contact), class: 'btn btn-primary' %>
+          <%= link_to t('common.delete'),contact_path(contact), class: "btn btn-danger", data: { turbo_method: :delete, turbo_confirm: t('common.confirm')} %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

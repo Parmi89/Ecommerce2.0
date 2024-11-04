@@ -1,0 +1,22 @@
+<div class="accordion-item">
+  <h2 class="accordion-header" id="heading<%= index %>">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= index %>" aria-expanded="false" aria-controls="collapse<%= index %>">
+      <span class="accordion-text text-center">
+        <%= question %>
+      </span>
+      <span class="accordion-arrow">
+      </span>
+    </button>
+  </h2>
+  <div id="collapse<%= index %>" class="accordion-collapse collapse" aria-labelledby="heading<%= index %>" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+      <%= answer %>  
+    </div>
+    <% if admin_signed_in? %>
+      <div>
+        <%= link_to t('common.edit'), edit_frequentquestion_path(frequentquestion), class: "btn btn-primary btn-sm btn-block" %>
+        <%= link_to t('common.delete'), frequentquestion, class: "btn btn-danger btn-sm",  data: { turbo_method: :delete, turbo_confirm: t('common.confirm') } %>
+      </div>
+    <% end %>
+  </div>
+</div>

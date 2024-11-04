@@ -1,0 +1,88 @@
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header"><%= t('.your_personal_data') %></div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-6">
+              <dl>
+                <div class="user-info">
+                  <dt><strong><%= t('common.first_name') %> </strong></dt>
+                  <dd><%= info_user.first_name %></dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="col-sm-6">
+              <dl>
+                <div class="user-info">
+                  <dt><strong><%= t('common.last_name') %> </strong></dt>
+                  <dd><%= info_user.last_name %></dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-6">
+              <dl>
+                <div class="user-info">
+                  <dt><strong><%= t('common.location') %> </strong></dt>
+                  <dd><%= info_user.location %></dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="col-sm-6">
+              <dl>
+                <div class="user-info">
+                  <dt><strong><%= t('common.province') %> </strong></dt>
+                  <dd><%= info_user.province %></dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-6">
+              <dl>
+                <div class="user-info">
+                  <dt><strong><%= t('common.street') %> </strong></dt>
+                  <dd><%= info_user.street %></dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="col-sm-6">
+              <dl>
+                <div class="user-info">
+                  <dt><strong><%= t('common.number') %> </strong></dt>
+                  <dd><%= info_user.number %></dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-6">
+              <dl>
+                <div class="user-info">
+                  <dt><strong><%= t('common.cell') %> </strong></dt>
+                  <dd><%= info_user.cell %></dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+          <div class="row mt-3">
+            <div class="col">
+              <%= link_to t('common.edit'), edit_user_info_user_path(@info_user), class: "btn btn-primary btn-sm mr-2" %>
+              <%= link_to t('common.back'), edit_user_registration_path, class: 'btn btn-primary btn-sm mr-2' %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

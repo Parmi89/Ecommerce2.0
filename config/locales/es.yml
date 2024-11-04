@@ -1,0 +1,221 @@
+es:
+  app_name: 'SUBLIMATE'
+  meta_title: 'Compra todo lo que buscas aqui!'
+  create_account: 'Crear cuenta nueva'
+  email: 'Correo electronico'
+  username: 'Usuario'
+  password: 'Contraseña'
+  password_confirm: 'Confirmar contraseña'
+  common:
+    log_in: 'Ingresar'
+    accept: 'Aceptar'
+    logout: 'Salir'
+    back: 'Volver'
+    edit: 'Editar'
+    delete: 'Eliminar'
+    confirm: '¿Estás seguro?'  
+    name: 'Nombre'
+    email: 'Correo electronico'
+    username: 'Usuario'
+    password: 'Contraseña'
+    repeat_password: 'Contraseña nueva'
+    close_acount: 'Cerrar cuenta'
+    question: 'Pregunta'  
+    answer: 'Respuesta'
+    not_admin: 'Acceso no autorizado. Debes ser administrador para acceder a esta página.'
+    show: 'Ver'
+    save: 'Guardar'
+    first_name: 'Nombre'    
+    last_name: 'Apellido'
+    province: 'Provincia'
+    location: 'Localidad'
+    street: 'Calle'
+    number: 'Numero'
+    cell: 'Celular' 
+  shared:
+    topBar:
+      all_product: 'Todos los productos'
+      about_us: 'Quienes somos'
+      frequent_question: 'Preguntas frecuentes'
+      my_account: 'Mi cuenta'
+      welcome: 'Bienvenido '
+      register: 'Registrarse'
+      contact_us: 'Contactanos'
+    topBarAdmin:
+      create_category: 'Crear categoria'
+      create_product: 'Crear Producto'
+      categories: 'Categorias'
+      users_account: 'Cuenta de usuarios'   
+      messages: 'Mensajes'
+      configuration: "Configuraciones"
+    header:
+       welcome: "¡Bienvenido/a %{email}!" 
+    footer:
+      helpful Links: 'Enlaces Útiles'
+      start: 'Ir al inicio'
+      about_us: 'Sobre nosotros'
+      frequentquestion: 'Preguntas frecuentes'
+      sign_up: 'Registrarse'
+      login: 'Ingresar'
+      social_networks: 'Redes sociales'
+      contact: 'Contacto'
+      copy: '2024. Todos los derechos reservados'  
+  user:
+    info_users:
+      update:
+        updated: 'Información actualizada correctamente !!!'
+      info_user:
+        your_personal_data: 'Tu informacion personal' 
+      form:
+        edit_info_user: 'Modifica tu informacion personal'     
+  categories:
+    index:
+      available_categories: 'Categorias disponibles'
+    create:
+      created: 'La categoria se creo correctamente!!!'
+    update:
+      updated: 'La categoria se actualizo correctamente!!!'
+    destroy:
+      destroyed: 'La categoria se elimino correctamente!!!'   
+    form:
+      new_category: 'Categoria nueva'  
+      name_cateogy: 'Nombre de categoria'      
+  products:
+        index:
+          all_categories: "Todas las categorias:"
+        searchBox:
+          query_text: '¿Que estas buscando?'
+        edit:
+          editing_product: 'Editar producto'
+        form:    
+          name: 'Nombre del producto'
+          price: 'Precio'
+          description: 'Descripcion:'
+          select_category: 'Selecciona su categoria'
+          photo: 'Foto'
+        new:
+          new_product: 'Nuevo producto'  
+        create:
+          created: 'El producto se creo correctamente!!!'
+        update:
+          updated: 'Producto se actualizo correctamente!!!'
+        destroy:
+          destroyed: 'El producto se elimino correctamente!!!'   
+  frequentquestions:
+    index:
+      frequentquestions: 'Preguntas frecuentes'
+      new_frequentquestion: 'Nueva pregunta frecuente'   
+    create:
+      created: 'La pregunta frecuente se creo correctamente!!!'
+    update:
+      updated: 'La pregunta frecuente se actualizó correctamente!!!'  
+    destroy:
+      destroyed: La pregunta frecuente se elimino correctamente!!! 
+    new:
+      new_frequentquestion: 'Agregar nueva pregunta frecuente'
+    edit:
+      editing_frequentquestion: 'Editar preguntar frecuentes'  
+  messages:
+    create:
+      created: 'Su mensaje se envio correctamente!!!'
+    update:
+      updated: 'Mensaje actualizado!!!'  
+    destroy:
+      destroyed: 'Mensaje eliminado!!!'
+    message:
+      sender: 'Remitente'
+      title: 'Titulo del mensaje'
+      body: 'Cuerpo del mensaje'    
+      state: 'Estado'
+    form:  
+      messenger_service: 'Mensajeria'
+      other: 'Otro'  
+      sender: 'Remitente'
+      title: 'Titulo del mensaje'
+      body: 'Cuerpo del mensaje'
+      type_response: 'Tipo de respuesta'
+      full_message: 'Escribe aqui tus consultas y los datos necesarios para contactarnos'
+      send: 'Enviar'
+      change_status: 'Cambiar estado'
+      pending: 'Pendiente'
+      send: 'Enviar'
+      answered: 'Respondido'
+      seen: 'Visto'
+  admin:
+    users:
+      update:
+        updated: 'Usuario modificado correctamente!!!'
+      destroy:
+        destroyed: 'Usuario eliminado correctamente!!!'
+      index:
+        query_user: 'Busar usuario por Id, email, apellido o nombre'
+        users_list: 'Lista de usuarios' 
+        total_accounts: 'Listando: ' 
+        last_name: 'Apellido'
+        first_name: 'Nombres'
+        accion: 'Accion'
+        no_data: 'No se encontraron usuarios con esa descripcion.'
+      show:
+        user_id: 'Usurario N°'
+        user_address_information: 'Direccion'  
+        user_personal_information: 'Informacion personal'
+      form:
+        change_password: 'Contraseña nueva' 
+        confirm_new_password: 'Confirmar contraseña nueva' 
+      edit:
+        editing_users: 'Modificar usuario'          
+  devise:
+    registrations:
+      edit:
+        change_password: 'Cambiar contraseña'
+        confirm_new_password: 'Confirmar nueva contraseña'
+        current-password: 'Contraseña actual'
+        close_my_account: 'Cerrar mi cuenta'
+        cancel_my_account: 'Cancelar mi cuenta'
+        current_password: 'Contraseña actual'
+        placeholder_current_password: 'Contraseña actual/ Necesaria para confirmar cambios'
+        my_information_personal: 'Mi informacion personal'
+    sessions:  
+      new:
+        email_or_username: 'Correo electronico/usuario'  
+  about_us:
+    create:
+      created: 'Quienes somos se cargo correctamente!!!'
+    update:
+      updated: 'Quienes somos se modifico correctamente!!!'
+    destroy:
+      destroyed: 'Quienes somos se ha eliminado correctamente!!!'
+    form:
+      title: 'Titulo'
+      body: 'Cuerpo de presentacion'
+    edit:
+      editing_about: 'Editar Quienes somos'         
+    index:
+      new_aboutus: 'Nuevo Quienes somos'
+    new:
+      new_about_u: 'Nuevo Quienes somos'  
+  contacts:
+    create:
+      created: 'Los datos se cargaron correctamente!!!'
+    update:
+      updated: 'Los datos se actualizon correctamente!!!'
+    destroy:
+      destroyed: 'Los datos se eliminaron correctamente!!!' 
+    index:
+      add_info: 'Agregar nueva informacion'    
+    contact:
+      contact_details: 'Detalle para contacto'
+      facebook: 'Facebook:'
+      instagram: 'Instagram:'
+      phone: 'Telefono:'
+      address: 'Direccion:'
+    form:
+      contact_form: 'Formulario de contacto'
+      facebook: 'Facebook:'
+      instagram: 'Instagram:'
+      phone: 'Telefono:'
+      address: 'Direccion:'
+      save: 'Guardar'
+      placeholder_facebook: "Ingresa solo el id o usuario de Facebook"
+      placeholder_instagram: "Ingresa solo el id o usuario de Instagram"
+ 

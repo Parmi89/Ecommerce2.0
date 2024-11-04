@@ -1,0 +1,12 @@
+<div class="container text-center mt-4">
+  <% if Contact.exists? %>
+    <% @contacts.each do |contact| %>
+      <%= render contact %>
+    <% end %>
+  <% else %>
+    <%= link_to t('.add_info'), new_contact_path, class: 'btn btn-primary' %>
+  <%end %>
+</div>  
+
+
+

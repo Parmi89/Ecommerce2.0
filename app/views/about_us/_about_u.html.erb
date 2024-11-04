@@ -1,0 +1,25 @@
+
+<div class="container-fluid mt-4">
+  <div class="row justify-content-center">
+    <div class="col-lg-10 col-md-12">
+      <div class="row justify-content-center">
+          <div class="col-lg-6 col-md-12 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title text-center"><%= about_u.title %></h5>
+                <p class="card-text"><%= about_u.body %></p>
+              </div>
+              <% if current_admin %>
+                <div class="card-footer text-end">
+                  <%= link_to t('common.edit'), edit_about_u_path(about_u), class: "btn btn-sm btn-outline-secondary" %>
+                  <%= link_to t('common.delete'), about_u_path(about_u), class: "btn btn-danger btn-sm", data: { turbo_method: :delete, turbo_confirm: t('common.confirm')} %>
+                </div>
+              <% end %>
+            </div>
+          </div>
+    
+      </div>
+
+    </div>
+  </div>
+</div>

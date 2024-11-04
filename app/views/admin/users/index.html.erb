@@ -1,0 +1,38 @@
+<div class="container mt-2">
+  <div class="row justify-content-center">
+    <div class="col-8">
+      <h2 class="text-center mb-2"><%= t('.users_list') %></h2>
+      <h5 class="text-center mb-2"><%= t('.total_accounts') %> <%= @users.count %> </h5>
+      <%= form_tag(admin_users_path, method: :get, class: "mb-4") do %>
+        <div class="input-group">
+          <%= text_field_tag :query, params[:query], class: "form-control", placeholder: t('.query_user') %>
+        </div>
+      <% end %>
+
+      <% if @users.any? %>
+        <div class="table-responsive"> <!-- Agregamos esta clase para hacer la tabla responsive -->
+          <table class="table mt-2">
+            <thead>
+              <tr>
+                <th class="text-center"><%= t('.id')%></th>
+                <th class="text-center"><%= t('.last_name')%></th>
+                <th class="text-center"><%= t('.first_name')%></th>
+                <th class="text-center"><%= t('common.email')%></th>
+                <th class="text-center"><%= t('.accion')%></th> <!-- Ajustamos el ancho para móviles -->
+              </tr>
+            </thead>
+            <tbody>
+              <%= render partial: 'user', collection: @users, locals: { info_users: @info_users } %>
+            </tbody>
+          </table>
+        </div>
+      <% else %>
+        <p class="text-center mt-4"><%= t('.no_data')%></p>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+

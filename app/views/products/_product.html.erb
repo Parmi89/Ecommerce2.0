@@ -1,0 +1,12 @@
+
+<div class="col mb-4">
+  <%= turbo_frame_tag "product-#{product.id}" do %>
+    <%= link_to product_path(product), class: 'card text-decoration-none text-dark', 'data-turbo-frame': '_top' do %>
+      <%= image_tag product.photos.attached? ? product.photos.first : 'no-photo.jpg', class: 'card-img-top', alt: product.name %>
+      <div class="card-body text-center">
+        <h5 class="card-title text-muted mb-0"><%= product.name %></h5>
+        <p class="card-text text-muted">$<%= number_to_currency(product.price, unit: '') %></p>
+      </div>
+    <% end %>
+  </div>
+<% end %>

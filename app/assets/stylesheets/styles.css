@@ -1,0 +1,45 @@
+/*SEARCH-BOX */
+ .search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px; /* Espacio inferior para separar de otros elementos */
+}
+
+.search-input {
+  width: 100%; /* La caja de búsqueda ocupa todo el ancho disponible */
+  padding: 6px 10px; /* Padding interno */
+  border: 1px solid #ccc; /* Borde */
+  border-radius: 10px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Transición suave para el borde y la sombra */
+}
+
+.search-input:focus {
+  outline: none; /* Quita el contorno al hacer focus */
+  border-color: hsl(308, 86%, 65%); /* Cambia el color del borde al hacer focus */
+  box-shadow: 0 0 5px rgba(233, 102, 194, 0.5); /* Sombra al hacer focus */
+}
+
+/* ACCORDION */
+.accordion-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  text-align: left;
+  padding: 1rem; /* Ajusta el padding según sea necesario */
+}
+
+.accordion-text {
+  flex-grow: 1; /* El texto ocupa todo el espacio disponible */
+}
+
+.accordion-arrow {
+  flex-shrink: 0; /* La flecha no crece, mantiene su tamaño original */
+  margin-left: 0.5rem; /* Ajusta el margen según sea necesario */
+}
+
+/* SOMBRA A LOS LINKS*/
+.hover-link:hover {
+  background-color: #e9ecef; /* Cambia a un gris más claro o el color que desees */
+}

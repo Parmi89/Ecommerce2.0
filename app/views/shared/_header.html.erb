@@ -1,0 +1,13 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid d-flex flex-wrap justify-content-center justify-content-lg-between align-items-center">
+    <div class="flex-fill text-center">
+      <%= link_to t('app_name'), products_path, class: "navbar-brand" %> 
+    </div>
+    <div class="flex-fill text-center">
+      <%= render partial: 'products/searchBox' %>
+    </div>
+    <div class="flex-fill text-center text-lg-end">
+      <%= t('.welcome', email: current_user&.username ||  current_admin&.username) %>
+    </div>
+  </div>
+</nav>
