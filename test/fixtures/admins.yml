@@ -1,9 +1,5 @@
 admin:
+  id: 1
   email: admin@admin.com
   username: admin
-  encrypted_password: <%= Devise::Encryptor.digest(Admin, '123123') %>
-
-admin2:
-  email: admin2@admin.com
-  username: admin2
   encrypted_password: <%= Devise::Encryptor.digest(Admin, '123123') %>
