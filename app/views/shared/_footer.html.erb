@@ -48,7 +48,8 @@
         <% @contacts.each do |contact| %>
           <ul>
             <% if contact.email.present? %>
-              <li><%= contact.email %></li>
+              <!-- <li><%= contact.email %></li> -->
+              <li><a href="mailto:<%= contact.email %>"><%= contact.email %></a></li>
             <% end %>
             <% if contact.facebook.present? %>
               <li><a href="https://www.facebook.com/<%= contact.facebook %>"
