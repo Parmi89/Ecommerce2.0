@@ -51,10 +51,12 @@
               <li><%= contact.email %></li>
             <% end %>
             <% if contact.facebook.present? %>
-              <li>https://www.facebook.com/<%= contact.facebook %></li>
+              <li><a href="https://www.facebook.com/<%= contact.facebook %>"
+               target="_blank">https://www.facebook.com/<%= contact.facebook %></a></li>
             <% end %>
             <% if contact.instagram.present? %>
-              <li>https://www.instagram.com/<%= contact.instagram %></li>
+              <li><a href="https://www.instagram.com/<%= contact.instagram %>"
+               target="_blank">https://www.instagram.com/<%= contact.instagram %></a></li>
             <% end %>      
             <% if contact.phone.present? %>
               <li><%= contact.phone %></li>
